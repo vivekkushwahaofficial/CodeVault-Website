@@ -1,72 +1,87 @@
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="bg-zinc-950 text-white">
-      <div className="mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
-
-        <span className="mb-6 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-sm text-purple-300">
+    <section className="px-6 pt-32 pb-28">
+      <div className="mx-auto max-w-6xl text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center rounded-full border border-purple-600/40 bg-purple-500/10 px-5 py-2 text-sm text-purple-300"
+        >
           🚀 v1.0.0 Released
-        </span>
+        </motion.div>
 
-        <h1 className="max-w-5xl text-5xl font-extrabold leading-tight md:text-7xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mx-auto mt-8 max-w-5xl text-6xl font-extrabold leading-tight text-white md:text-7xl"
+        >
           Automatically Sync Your
-          <span className="block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <br />
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Coding Solutions
           </span>
+          <br />
           to GitHub
-        </h1>
+        </motion.h1>
 
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400 md:text-xl">
-          CodeVault detects accepted LeetCode submissions,
-          extracts your solution and problem details,
-          then automatically organizes and pushes everything
-          to your GitHub repository.
-        </p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.35 }}
+          className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-gray-400"
+        >
+          CodeVault detects accepted LeetCode submissions, extracts your
+          solution and problem details, then automatically organizes and pushes
+          everything to your GitHub repository.
+        </motion.p>
 
-        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-12 flex flex-wrap justify-center gap-6"
+        >
           <a
-            href="https://github.com/vivekkushwahaofficial/CodeVault/releases/latest"
-            className="flex items-center justify-center gap-2 rounded-xl bg-purple-600 px-8 py-4 font-semibold transition hover:bg-purple-700"
+            href="#download"
+            className="flex items-center gap-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-500 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.45)]"
           >
-            <FaGithub size={20} />
+            <FaGithub />
             Download Extension
           </a>
 
           <a
             href="https://github.com/vivekkushwahaofficial/CodeVault"
             target="_blank"
-            rel="noreferrer"
-            className="flex items-center justify-center gap-2 rounded-xl border border-zinc-700 px-8 py-4 font-semibold transition hover:border-purple-500"
+            className="flex items-center gap-3 rounded-xl border border-gray-700 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-purple-500 hover:bg-zinc-900 hover:scale-105"
           >
-            <FaGithub size={20} />
+            <FaGithub />
             View on GitHub
           </a>
+        </motion.div>
 
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="mx-auto mt-24 max-w-3xl rounded-3xl border border-zinc-800 bg-zinc-900/70 p-10 text-left backdrop-blur"
+        >
+          <p className="text-sm text-gray-500">Workflow</p>
 
-        <div className="mt-16 rounded-2xl border border-zinc-800 bg-zinc-900 p-8 shadow-2xl">
+          <h3 className="mt-4 text-4xl font-bold text-white">
+            LeetCode → CodeVault → GitHub
+          </h3>
 
-          <div className="text-left">
-
-            <p className="text-sm text-zinc-500">
-              Workflow
-            </p>
-
-            <h3 className="mt-4 text-2xl font-bold">
-              LeetCode → CodeVault → GitHub
-            </h3>
-
-            <p className="mt-4 text-zinc-400">
-              Solve a problem once.
-              CodeVault takes care of everything else.
-            </p>
-
-          </div>
-
-        </div>
-
+          <p className="mt-4 text-lg text-gray-400">
+            Solve a problem once. CodeVault automatically detects accepted
+            submissions, extracts metadata, commits your solution, updates your
+            repository, and keeps your coding portfolio organized.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

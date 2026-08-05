@@ -12,37 +12,37 @@ const features = [
     icon: GitBranch,
     title: "GitHub Sync",
     description:
-      "Automatically push every accepted solution directly to your GitHub repository.",
+      "Automatically push every accepted solution directly to GitHub.",
   },
   {
     icon: FolderGit2,
     title: "Smart Organization",
     description:
-      "Solutions are organized by platform, difficulty and problem name automatically.",
+      "Organize solutions by platform, difficulty, topic and programming language.",
   },
   {
     icon: FileText,
-    title: "README Generation",
+    title: "README Generator",
     description:
-      "Keep your repository updated with generated statistics and documentation.",
+      "Keep your repository updated with statistics, badges and progress automatically.",
   },
   {
     icon: Database,
     title: "Metadata Extraction",
     description:
-      "Store problem title, difficulty, language and additional information.",
+      "Capture problem name, tags, difficulty, language and submission date.",
   },
   {
     icon: ShieldCheck,
     title: "Duplicate Detection",
     description:
-      "Avoid duplicate commits by detecting already synchronized submissions.",
+      "Never commit the same solution twice. CodeVault detects duplicates automatically.",
   },
   {
     icon: Zap,
-    title: "Lightning Fast",
+    title: "One Click Setup",
     description:
-      "Detect accepted submissions instantly and sync them within seconds.",
+      "Authenticate with GitHub once and let CodeVault handle everything afterwards.",
   },
 ];
 
@@ -50,42 +50,48 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="mx-auto max-w-7xl px-6 py-28"
+      className="border-t border-zinc-800 bg-black px-6 py-28"
     >
-      <div className="text-center mb-16">
-        <h2 className="text-5xl font-bold">
-          Everything You Need
-        </h2>
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center">
+          <p className="text-purple-400 font-semibold uppercase tracking-widest">
+            Features
+          </p>
 
-        <p className="mt-5 text-zinc-400 text-lg max-w-2xl mx-auto">
-          CodeVault automates your coding workflow so you can focus on solving
-          problems instead of managing repositories.
-        </p>
-      </div>
+          <h2 className="mt-4 text-5xl font-bold text-white">
+            Everything You Need
+          </h2>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature) => {
-          const Icon = feature.icon;
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
+            CodeVault is built to automate your coding portfolio, GitHub
+            repository and solution management with zero manual work.
+          </p>
+        </div>
 
-          return (
-            <div
-              key={feature.title}
-              className="group rounded-2xl border border-zinc-800 bg-zinc-900 p-8 transition-all duration-300 hover:border-violet-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(139,92,246,.25)]"
-            >
-              <div className="mb-6 inline-flex rounded-xl bg-violet-600/20 p-4 text-violet-400">
-                <Icon size={28} />
+        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => {
+            const Icon = feature.icon;
+
+            return (
+              <div
+                key={feature.title}
+                className="group rounded-2xl border border-zinc-800 bg-zinc-900/70 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-500">
+                  <Icon size={28} className="text-white" />
+                </div>
+
+                <h3 className="mt-6 text-2xl font-semibold text-white">
+                  {feature.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-gray-400">
+                  {feature.description}
+                </p>
               </div>
-
-              <h3 className="mb-3 text-2xl font-semibold">
-                {feature.title}
-              </h3>
-
-              <p className="text-zinc-400 leading-7">
-                {feature.description}
-              </p>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

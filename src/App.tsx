@@ -5,6 +5,7 @@ import HowItWorks from "./components/HowItWorks";
 import Platforms from "./components/Platforms";
 import Roadmap from "./components/Roadmap";
 import Footer from "./components/Footer";
+import CTA from "./components/CTA";
 
 function App() {
   return (
@@ -15,6 +16,13 @@ function App() {
       <HowItWorks />
       <Platforms />
       <Roadmap />
+      <Footer />
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <Platforms />
+      <Roadmap />
+      <CTA />
       <Footer />
     </>
   );
