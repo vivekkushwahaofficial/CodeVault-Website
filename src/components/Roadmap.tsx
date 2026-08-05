@@ -25,7 +25,7 @@ export default function Roadmap() {
   return (
     <section
       id="roadmap"
-      className="border-t border-white/10 bg-[#0b0b0f] py-28"
+      className="border-t border-white/10 bg-[#0b0b0f] py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-16 max-w-3xl text-center">
@@ -33,11 +33,11 @@ export default function Roadmap() {
             Workflow
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-5 text-5xl font-bold tracking-tight text-white">
             Three Simple Steps
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-zinc-400">
+          <p className="mt-6 text-base leading-8 text-zinc-400">
             Keep solving coding problems as usual. CodeVault automates everything
             after your submission is accepted.
           </p>
@@ -47,22 +47,22 @@ export default function Roadmap() {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="group rounded-3xl border border-white/10 bg-zinc-900/60 p-10 transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.15)]"
+              className="group rounded-[28px] border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:bg-white/[0.07] hover:shadow-[0_24px_80px_rgba(168,85,247,0.12)]"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 text-3xl font-bold text-white">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 text-2xl font-bold text-white shadow-[0_10px_30px_rgba(168,85,247,0.22)]">
                 {step.number}
               </div>
 
-              <h3 className="mt-8 text-4xl font-bold text-white">
+              <h3 className="mt-8 text-2xl font-bold tracking-tight text-white">
                 {step.title}
               </h3>
 
-              <p className="mt-6 text-lg leading-8 text-zinc-400">
+              <p className="mt-6 text-base leading-8 text-zinc-400">
                 {step.description}
               </p>
 
               {index !== steps.length - 1 && (
-                <ArrowRight className="mt-10 h-8 w-8 text-purple-400 transition-transform duration-300 group-hover:translate-x-2" />
+                <ArrowRight className="mt-10 h-6 w-6 text-purple-400 transition-transform duration-300 group-hover:translate-x-2" />
               )}
             </div>
           ))}

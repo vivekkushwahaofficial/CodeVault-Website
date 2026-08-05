@@ -68,7 +68,7 @@ export default function Platforms() {
   return (
     <section
       id="platforms"
-      className="border-t border-white/10 bg-[#0b0b0f] py-28"
+      className="border-t border-white/10 bg-[#0b0b0f] py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-16 max-w-3xl text-center">
@@ -76,13 +76,13 @@ export default function Platforms() {
             Supported Platforms
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-5 text-5xl font-bold tracking-tight text-white">
             One Extension.
             <br />
             Every Coding Platform.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-zinc-400">
             Start with LeetCode today. More coding platforms are being added
             continuously as CodeVault evolves.
           </p>
@@ -95,25 +95,25 @@ export default function Platforms() {
             return (
               <div
                 key={platform.title}
-                className="group rounded-3xl border border-white/10 bg-zinc-900/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:shadow-[0_0_40px_rgba(168,85,247,0.15)]"
+                className="group rounded-[28px] border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:bg-white/[0.07] hover:shadow-[0_24px_80px_rgba(168,85,247,0.12)]"
               >
-                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500">
-                  <Icon className="h-8 w-8 text-white" />
+                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 shadow-[0_10px_30px_rgba(168,85,247,0.22)]">
+                  <Icon className="h-6 w-6 text-white" />
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <h3 className="text-3xl font-bold text-white">
+                  <h3 className="text-2xl font-bold tracking-tight text-white">
                     {platform.title}
                   </h3>
 
                   <span
-                    className={`rounded-full px-3 py-1 text-xs font-semibold ${platform.statusColor}`}
+                    className={`rounded-full px-3 py-1 text-xs font-semibold tracking-wide ${platform.statusColor}`}
                   >
                     {platform.status}
                   </span>
                 </div>
 
-                <p className="mt-6 text-lg leading-8 text-zinc-400">
+                <p className="mt-6 text-base leading-8 text-zinc-400">
                   {platform.description}
                 </p>
               </div>

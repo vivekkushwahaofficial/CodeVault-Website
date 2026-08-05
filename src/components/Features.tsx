@@ -50,19 +50,19 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="border-t border-zinc-800 bg-black px-6 py-28"
+      className="border-t border-white/10 bg-black/40 px-6 py-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
-          <p className="text-purple-400 font-semibold uppercase tracking-widest">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-purple-400">
             Features
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold text-white">
+          <h2 className="mt-4 text-5xl font-bold tracking-tight text-white">
             Everything You Need
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-zinc-400">
             CodeVault is built to automate your coding portfolio, GitHub
             repository and solution management with zero manual work.
           </p>
@@ -75,17 +75,17 @@ export default function Features() {
             return (
               <div
                 key={feature.title}
-                className="group rounded-2xl border border-zinc-800 bg-zinc-900/70 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
+                className="group rounded-[28px] border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:bg-white/[0.07] hover:shadow-[0_24px_80px_rgba(168,85,247,0.12)]"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-500">
-                  <Icon size={28} className="text-white" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-purple-600 to-pink-500 shadow-[0_10px_30px_rgba(168,85,247,0.25)]">
+                  <Icon size={24} className="text-white" />
                 </div>
 
                 <h3 className="mt-6 text-2xl font-semibold text-white">
                   {feature.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-gray-400">
+                <p className="mt-4 text-base leading-8 text-zinc-400">
                   {feature.description}
                 </p>
               </div>

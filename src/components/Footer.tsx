@@ -14,11 +14,11 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="md:col-span-2">
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-2xl font-semibold tracking-tight text-white">
               🚀 CodeVault
             </h2>
 
-            <p className="mt-5 max-w-md text-lg leading-8 text-zinc-400">
+            <p className="mt-5 max-w-md text-base leading-8 text-zinc-400">
               Automatically organize, version and synchronize your coding
               solutions from LeetCode and other coding platforms directly to
               GitHub.
@@ -27,25 +27,25 @@ export default function Footer() {
 
           {/* Product */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-white">
               Product
             </h3>
 
-            <ul className="mt-5 space-y-3 text-zinc-400">
+            <ul className="mt-5 space-y-3 text-sm text-zinc-400">
               <li>
-                <a href="#features" className="hover:text-white">
+                <a href="#features" className="transition-colors hover:text-white">
                   Features
                 </a>
               </li>
 
               <li>
-                <a href="#roadmap" className="hover:text-white">
+                <a href="#roadmap" className="transition-colors hover:text-white">
                   Roadmap
                 </a>
               </li>
 
               <li>
-                <a href="#download" className="hover:text-white">
+                <a href="#download" className="transition-colors hover:text-white">
                   Download
                 </a>
               </li>
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Community */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-white">
               Community
             </h3>
 
@@ -64,19 +64,21 @@ export default function Footer() {
                 href="https://github.com/vivekkushwahaofficial/CodeVault"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 text-zinc-400 hover:text-white"
+                className="inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
               >
-                <GitBranch size={18} />
+                <GitBranch size={16} />
                 GitHub
-                <ExternalLink size={15} />
+                <ExternalLink size={14} />
               </a>
 
               <a
-                href="mailto:your@email.com"
-                className="inline-flex items-center gap-2 text-zinc-400 hover:text-white"
+                href="https://github.com/vivekkushwahaofficial/CodeVault/issues"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
               >
-                <Mail size={18} />
-                Contact
+                <Mail size={16} />
+                Issues
               </a>
 
             </div>
@@ -94,7 +96,7 @@ export default function Footer() {
             Built with
             <Heart
               className="text-pink-500"
-              size={16}
+              size={14}
               fill="currentColor"
             />
             for Developers

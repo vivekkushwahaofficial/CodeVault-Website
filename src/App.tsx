@@ -4,19 +4,13 @@ import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import Platforms from "./components/Platforms";
 import Roadmap from "./components/Roadmap";
-import Footer from "./components/Footer";
 import CTA from "./components/CTA";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Platforms />
-      <Roadmap />
-      <Footer />
       <Hero />
       <Features />
       <HowItWorks />

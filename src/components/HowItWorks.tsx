@@ -20,13 +20,13 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="py-28 px-6">
+    <section id="how" className="px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-center text-5xl font-bold text-white">
+        <h2 className="text-center text-5xl font-bold tracking-tight text-white">
           How It Works
         </h2>
 
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-400">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-8 text-zinc-400">
           Three simple steps. Solve problems as usual, CodeVault handles the
           rest automatically.
         </p>
@@ -35,22 +35,22 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:border-purple-500 hover:-translate-y-2"
+              className="rounded-[28px] border border-white/10 bg-white/5 p-8 transition duration-300 hover:-translate-y-2 hover:border-purple-500/50 hover:bg-white/[0.07] hover:shadow-[0_24px_80px_rgba(168,85,247,0.12)]"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-xl font-bold text-white">
+              <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-lg font-bold text-white shadow-[0_10px_30px_rgba(168,85,247,0.25)]">
                 {index + 1}
               </div>
 
-              <h3 className="text-2xl font-semibold text-white">
+              <h3 className="text-2xl font-semibold tracking-tight text-white">
                 {step.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-gray-400">
+              <p className="mt-4 text-base leading-8 text-zinc-400">
                 {step.description}
               </p>
 
               {index !== steps.length - 1 && (
-                <ArrowRight className="mt-8 text-purple-400" size={28} />
+                <ArrowRight className="mt-8 text-purple-400" size={24} />
               )}
             </div>
           ))}

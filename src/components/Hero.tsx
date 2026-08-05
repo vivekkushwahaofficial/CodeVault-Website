@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="px-6 pt-32 pb-28">
+    <section className="px-6 py-24">
       <div className="mx-auto max-w-6xl text-center">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center rounded-full border border-purple-600/40 bg-purple-500/10 px-5 py-2 text-sm text-purple-300"
+          className="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-xs font-medium tracking-[0.24em] text-purple-200"
         >
           🚀 v1.0.0 Released
         </motion.div>
@@ -18,7 +18,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mx-auto mt-8 max-w-5xl text-6xl font-extrabold leading-tight text-white md:text-7xl"
+          className="mx-auto mt-8 max-w-5xl text-6xl font-extrabold leading-[0.94] tracking-tight text-white md:text-7xl"
         >
           Automatically Sync Your
           <br />
@@ -33,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.35 }}
-          className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-gray-400"
+          className="mx-auto mt-8 max-w-3xl text-base leading-8 text-zinc-400 md:text-lg"
         >
           CodeVault detects accepted LeetCode submissions, extracts your
           solution and problem details, then automatically organizes and pushes
@@ -44,22 +44,23 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-12 flex flex-wrap justify-center gap-6"
+          className="mt-12 flex flex-wrap justify-center gap-4 sm:gap-6"
         >
           <a
             href="#download"
-            className="flex items-center gap-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-500 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.45)]"
+            className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]"
           >
-            <FaGithub />
+            <FaGithub size={18} />
             Download Extension
           </a>
 
           <a
             href="https://github.com/vivekkushwahaofficial/CodeVault"
             target="_blank"
-            className="flex items-center gap-3 rounded-xl border border-gray-700 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-purple-500 hover:bg-zinc-900 hover:scale-105"
+            rel="noreferrer"
+            className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:border-purple-500/60 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
           >
-            <FaGithub />
+            <FaGithub size={18} />
             View on GitHub
           </a>
         </motion.div>
@@ -68,15 +69,15 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="mx-auto mt-24 max-w-3xl rounded-3xl border border-zinc-800 bg-zinc-900/70 p-10 text-left backdrop-blur"
+          className="mx-auto mt-24 max-w-3xl rounded-[28px] border border-white/10 bg-white/5 p-8 text-left shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur"
         >
-          <p className="text-sm text-gray-500">Workflow</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">Workflow</p>
 
-          <h3 className="mt-4 text-4xl font-bold text-white">
+          <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white md:text-3xl">
             LeetCode → CodeVault → GitHub
           </h3>
 
-          <p className="mt-4 text-lg text-gray-400">
+          <p className="mt-4 text-base leading-8 text-zinc-400 md:text-lg">
             Solve a problem once. CodeVault automatically detects accepted
             submissions, extracts metadata, commits your solution, updates your
             repository, and keeps your coding portfolio organized.
