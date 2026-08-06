@@ -11,13 +11,21 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           to="/"
-          className="text-xl font-semibold tracking-tight text-white"
+          className="flex items-center gap-2"
         >
-          🚀 CodeVault
+          <img
+            src="/logo.png"
+            alt="CodeVault"
+            className="h-11 w-11"
+          />
+
+          <span className="text-2xl font-extrabold tracking-tight text-white">
+            CodeVault
+          </span>
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden gap-8 text-sm text-zinc-400 md:flex">
+        <nav className="hidden items-center gap-8 text-sm text-zinc-400 md:flex">
           <a href="#features" className="transition-colors hover:text-white">
             Features
           </a>
@@ -38,7 +46,7 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* GitHub Button */}
+        {/* GitHub */}
         <a
           href={GITHUB}
           target="_blank"
