@@ -26,7 +26,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mx-auto mt-6 max-w-[12ch] text-4xl font-extrabold leading-tight tracking-tight text-white sm:mt-8 sm:max-w-5xl sm:text-6xl sm:leading-[0.94] md:text-7xl"
+          className="mx-auto mt-6 max-w-[12ch] text-5xl font-extrabold leading-tight tracking-tight text-white sm:mt-8 sm:max-w-5xl sm:text-6xl sm:leading-[0.94] md:text-7xl"
         >
           Automatically Sync Your
           <br className="hidden sm:block" />
