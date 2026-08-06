@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const GITHUB = "https://github.com/vivekkushwahaofficial/CodeVault";
 
@@ -110,19 +111,33 @@ export default function Footer() {
           </div>
 
           <div className="mt-8 border-t border-white/10 pt-5">
-
-            <div className="flex flex-col gap-3 text-center text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
-
+            <div className="flex flex-col gap-4 text-center text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
               <p>
                 © {new Date().getFullYear()} CodeVault. All rights reserved.
               </p>
 
-              <p>
-                Open Source • MIT License • Built for Developers
-              </p>
+              <div className="flex flex-wrap items-center justify-center gap-5">
+                <Link
+                  to="/privacy"
+                  className="transition-colors hover:text-white"
+                >
+                  Privacy Policy
+                </Link>
 
+                <a
+                  href={GITHUB}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  GitHub
+                </a>
+
+                <span>MIT License</span>
+
+                <span>Built for Developers</span>
+              </div>
             </div>
-
           </div>
 
         </div>
