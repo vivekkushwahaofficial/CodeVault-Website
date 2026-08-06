@@ -10,7 +10,7 @@ const RELEASE_URL =
 
 export default function Hero() {
   return (
-    <section className="px-6 pt-12 pb-24">
+    <section className="px-4 pt-10 pb-20 sm:px-6 sm:pt-12 sm:pb-24">
       <div className="mx-auto max-w-6xl text-center">
 
         <motion.div
@@ -26,14 +26,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mx-auto mt-8 max-w-5xl text-6xl font-extrabold leading-[0.94] tracking-tight text-white md:text-7xl"
+          className="mx-auto mt-6 max-w-[12ch] text-4xl font-extrabold leading-tight tracking-tight text-white sm:mt-8 sm:max-w-5xl sm:text-6xl sm:leading-[0.94] md:text-7xl"
         >
           Automatically Sync Your
-          <br />
+          <br className="hidden sm:block" />
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Coding Solutions
           </span>
-          <br />
+          <br className="hidden sm:block" />
           to GitHub
         </motion.h1>
 
@@ -52,13 +52,13 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-12 flex flex-wrap justify-center gap-4 sm:gap-6"
+          className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:mt-12 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:gap-6"
         >
           <a
             href={RELEASE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]"
+            className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] sm:w-auto"
           >
             <Download size={20} strokeWidth={2.5} />
             Download Extension
@@ -68,7 +68,7 @@ export default function Hero() {
             href={REPOSITORY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:border-purple-500/60 hover:bg-white/10"
+            className="flex w-full items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:border-purple-500/60 hover:bg-white/10 sm:w-auto"
           >
             <FaGithub size={18} />
             View on GitHub
@@ -79,23 +79,23 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="mx-auto mt-24 max-w-5xl rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-[0_24px_80px_rgba(0,0,0,0.35)]"
+          className="mx-auto mt-16 max-w-5xl overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:mt-24 sm:p-8"
         >
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex min-w-0 flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
 
-            <div className="text-left">
+            <div className="min-w-0 text-left">
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-purple-300">
                 Workflow
               </p>
 
-              <h3 className="mt-3 text-3xl font-bold text-white">
+              <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
                 One Submission.
                 <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                   {" "}Automatic Sync.
                 </span>
               </h3>
 
-              <p className="mt-4 max-w-xl text-lg leading-8 text-zinc-400">
+              <p className="mt-4 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg sm:leading-8">
                 Keep solving coding problems as usual. CodeVault automatically
                 detects accepted submissions, extracts metadata, commits your
                 solution, updates your repository, and maintains your GitHub
@@ -103,10 +103,10 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-zinc-950/50 p-6 lg:min-w-[340px]">
-              <div className="space-y-5">
+            <div className="w-full rounded-3xl border border-white/10 bg-zinc-950/50 p-5 sm:p-6 lg:min-w-[340px]">
+              <div className="space-y-4 sm:space-y-5">
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-500/15 text-2xl">
                     🟠
                   </div>
@@ -124,7 +124,7 @@ export default function Hero() {
 
                 <div className="ml-5 h-8 w-px bg-gradient-to-b from-purple-500 to-pink-500" />
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-500/15">
                     🚀
                   </div>
@@ -142,7 +142,7 @@ export default function Hero() {
 
                 <div className="ml-5 h-8 w-px bg-gradient-to-b from-purple-500 to-blue-500" />
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/15">
                     <FaGithub size={20} />
                   </div>
