@@ -6,7 +6,7 @@ const REPOSITORY_URL =
   "https://github.com/vivekkushwahaofficial/CodeVault";
 
 const RELEASE_URL =
-  "https://github.com/vivekkushwahaofficial/CodeVault/releases/tag/v1.0.0";
+  "https://github.com/vivekkushwahaofficial/CodeVault/releases/latest";
 
 export default function Hero() {
   return (

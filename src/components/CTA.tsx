@@ -25,7 +25,7 @@ export default function CTA() {
 
         <div className="mt-14 flex flex-col justify-center gap-4 sm:flex-row sm:gap-5">
           <a
-            href="https://github.com/vivekkushwahaofficial/CodeVault/releases/tag/v1.0.0"
+            href="https://github.com/vivekkushwahaofficial/CodeVault/releases/latest"
             className="inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
           >
             <Download size={18} />
