@@ -1,32 +1,48 @@
-# React + TypeScript + Vite
+# 🚀 CodeVault
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Automatically sync accepted LeetCode solutions to GitHub.
 
-Currently, two official plugins are available:
+CodeVault is an open-source browser extension that detects accepted coding submissions, extracts the solution and metadata, and automatically commits everything to your GitHub repository.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- ⚡ Automatic LeetCode submission detection
+- 📄 Extract source code and problem metadata
+- 📂 Organize solutions in GitHub
+- 🔐 Secure GitHub OAuth authentication
+- 🚀 One-click download via GitHub Releases
+- 🌙 Modern and responsive landing page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Website
 
-## Expanding the Oxlint configuration
+https://code-vault-website.vercel.app/
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📥 Download
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+https://github.com/vivekkushwahaofficial/CodeVault/releases/latest
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 💻 Repository
+
+https://github.com/vivekkushwahaofficial/CodeVault
+
+## 🛣️ Roadmap
+
+- Multi-platform support
+- AI-powered problem classification
+- Analytics dashboard
+- Portfolio generator
+- Revision planner
+- Chrome Web Store release
+
+## 🤝 Contributing
+
+Contributions, feature requests, and bug reports are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+## 📄 License
+
+Licensed under the **MIT License**.
