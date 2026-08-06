@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
-import HowItWorks from "./components/HowItWorks";
 import Platforms from "./components/Platforms";
+import FutureEnhancements from "./components/FutureEnhancements";
 import Roadmap from "./components/Roadmap";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
@@ -13,8 +13,8 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
-      <HowItWorks />
       <Platforms />
+      <FutureEnhancements />
       <Roadmap />
       <CTA />
       <Footer />
