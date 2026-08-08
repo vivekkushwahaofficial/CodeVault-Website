@@ -1,12 +1,12 @@
 # 🚀 CodeVault
 
-> Automatically sync accepted LeetCode solutions to GitHub.
+> Automatically sync accepted LeetCode & GreeksForGreeks solutions to GitHub.
 
 CodeVault is an open-source browser extension that detects accepted coding submissions, extracts the solution and metadata, and automatically commits everything to your GitHub repository.
 
 ## ✨ Features
 
-- ⚡ Automatic LeetCode submission detection
+- ⚡ Automatic LeetCode & GreeksForGreeks submission detection
 - 📄 Extract source code and problem metadata
 - 📂 Organize solutions in GitHub
 - 🔐 Secure GitHub OAuth authentication
