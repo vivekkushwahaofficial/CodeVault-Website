@@ -20,11 +20,11 @@ const platforms = [
   {
     title: "GeeksforGeeks",
     description:
-      "Automatic solution synchronization is currently under active development.",
+      "Accepted submissions are detected automatically and pushed directly to your GitHub repository.",
     icon: BookOpen,
-    status: "Coming Soon",
+    status: "Supported",
     statusColor:
-      "bg-purple-500/10 text-purple-300 border border-purple-500/20",
+      "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
   },
   {
     title: "Codeforces",
