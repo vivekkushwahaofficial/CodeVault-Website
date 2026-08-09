@@ -1,9 +1,9 @@
 const futureEnhancements = [
   {
     icon: "🌐",
-    title: "Multi-Platform Support",
+    title: "Expanded Platform Support",
     description:
-      "Support for GeeksforGeeks, HackerRank, Codeforces, CodeChef, AtCoder, and more.",
+      "Support for Codeforces, CodeChef, AtCoder, and more coding platforms.",
   },
   {
     icon: "🤖",

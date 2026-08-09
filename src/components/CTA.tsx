@@ -45,9 +45,9 @@ export default function CTA() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-3xl font-bold tracking-tight text-white">1+</h3>
+            <h3 className="text-3xl font-bold tracking-tight text-white">3</h3>
             <p className="mt-2 text-zinc-400">
-              Supported Platform
+              Supported Platforms
             </p>
           </div>
 
