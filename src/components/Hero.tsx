@@ -79,12 +79,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="mx-auto mt-16 max-w-[1120px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:mt-24 sm:p-5 lg:p-6"
+          className="mx-auto mt-16 max-w-[1120px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-3 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:mt-24 sm:p-5 lg:p-6"
         >
-          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-6">
+          <div className="grid grid-cols-2 items-start gap-3 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-6">
 
             {/* ==================== 50% — WORKFLOW ==================== */}
-            <div className="min-w-0 flex h-full flex-col justify-center text-left">
+            <div className="col-span-2 min-w-0 flex h-full flex-col justify-center text-left lg:col-span-1">
 
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-purple-300">
                 Workflow
@@ -127,7 +127,7 @@ export default function Hero() {
 
 
             {/* ==================== 25% — SYNC FLOW ==================== */}
-            <div className="flex min-w-0 items-center justify-center lg:self-center">
+            <div className="flex w-full min-w-0 items-center justify-center lg:w-auto lg:self-center">
 
               <div className="flex flex-col items-center">
 
