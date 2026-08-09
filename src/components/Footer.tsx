@@ -19,7 +19,7 @@ export default function Footer() {
 
               <p className="mt-4 max-w-sm text-sm leading-7 text-zinc-400">
                 Automatically organize and sync your coding solutions from
-                LeetCode directly to GitHub.
+                LeetCode, GeeksforGeeks, and HackerRank directly to GitHub.
               </p>
 
               <a

@@ -38,11 +38,11 @@ const platforms = [
   {
     title: "HackerRank",
     description:
-      "Automatically organize interview practice and certification solutions.",
+      "Automatically detect accepted submissions and sync your solutions directly to GitHub.",
     icon: Terminal,
-    status: "Coming Soon",
+    status: "Supported",
     statusColor:
-      "bg-purple-500/10 text-purple-300 border border-purple-500/20",
+      "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
   },
   {
     title: "CodeChef",

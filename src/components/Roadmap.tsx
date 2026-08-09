@@ -3,21 +3,21 @@ import { ArrowRight } from "lucide-react";
 const steps = [
   {
     number: "1",
-    title: "Solve on LeetCode",
+    title: "Solve on a Supported Platform",
     description:
-      "Solve any coding problem and submit your solution normally.",
+      "Solve and submit a coding problem normally on LeetCode, GeeksforGeeks, or HackerRank.",
   },
   {
     number: "2",
     title: "CodeVault Detects",
     description:
-      "The extension automatically detects accepted submissions and extracts metadata.",
+      "The extension automatically detects an accepted submission and extracts your solution and problem metadata.",
   },
   {
     number: "3",
     title: "Push to GitHub",
     description:
-      "Your solution is organized, committed and pushed directly to your GitHub repository.",
+      "CodeVault organizes your solution, prevents duplicate syncs, commits the files, and pushes them directly to your GitHub repository.",
   },
 ];
 
