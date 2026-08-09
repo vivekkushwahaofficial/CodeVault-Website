@@ -27,15 +27,6 @@ const platforms = [
       "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
   },
   {
-    title: "Codeforces",
-    description:
-      "Competitive programming submissions will be supported in an upcoming release.",
-    icon: Trophy,
-    status: "Coming Soon",
-    statusColor:
-      "bg-purple-500/10 text-purple-300 border border-purple-500/20",
-  },
-  {
     title: "HackerRank",
     description:
       "Automatically detect accepted submissions and sync your solutions directly to GitHub.",
@@ -43,6 +34,15 @@ const platforms = [
     status: "Supported",
     statusColor:
       "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
+  },
+  {
+    title: "Codeforces",
+    description:
+      "Competitive programming submissions will be supported in an upcoming release.",
+    icon: Trophy,
+    status: "Coming Soon",
+    statusColor:
+      "bg-purple-500/10 text-purple-300 border border-purple-500/20",
   },
   {
     title: "CodeChef",
