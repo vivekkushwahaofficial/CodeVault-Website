@@ -52,21 +52,19 @@ export default function FutureEnhancements() {
       className="
         relative overflow-hidden
         border-t border-white/[0.06]
-        px-5 py-24
-        sm:px-6 sm:py-28
-        lg:px-8 lg:py-32
+        px-5 py-20
+        sm:px-6 sm:py-24
+        lg:px-8 lg:py-28
       "
     >
-      {/* =====================================================
-          SUBTLE BACKGROUND
-      ====================================================== */}
-
+      {/* Subtle background glow */}
       <div
         aria-hidden="true"
         className="
           pointer-events-none
-          absolute left-1/3 top-20
-          h-[420px] w-[650px]
+          absolute left-1/2 top-0
+          h-[420px] w-[700px]
+          -translate-x-1/2
           rounded-full
           bg-purple-600/[0.025]
           blur-[120px]
@@ -75,47 +73,38 @@ export default function FutureEnhancements() {
 
       <div className="relative mx-auto max-w-7xl">
 
-        {/* ===================================================
-            SECTION HEADER
-        ==================================================== */}
-
+        {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
 
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2">
+          <div className="inline-flex items-center gap-3">
             <span
               aria-hidden="true"
-              className="h-px w-8 bg-purple-400/60"
+              className="h-px w-7 bg-purple-400/60"
             />
 
-            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-purple-400">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
               Future Enhancements
             </span>
 
             <span
               aria-hidden="true"
-              className="h-px w-8 bg-purple-400/60"
+              className="h-px w-7 bg-purple-400/60"
             />
           </div>
 
-          {/* Heading */}
-          <h2 className="mt-5 text-4xl font-bold tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.4rem]">
+          <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white sm:text-5xl lg:text-[3.25rem]">
             The Road Ahead
           </h2>
 
-          {/* Description */}
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
-            CodeVault is continuously evolving into a complete developer
-            productivity platform with AI-powered automation, analytics,
-            and multi-platform support.
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
+            CodeVault is evolving into a complete developer productivity
+            platform with AI-powered automation, analytics, and
+            multi-platform support.
           </p>
         </div>
 
-        {/* ===================================================
-            FUTURE FEATURES
-        ==================================================== */}
-
-        <div className="mt-14 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+        {/* Future Features */}
+        <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {futureEnhancements.map((item, index) => {
             const Icon = item.icon;
 
@@ -125,18 +114,18 @@ export default function FutureEnhancements() {
                 className="
                   group relative overflow-hidden
                   rounded-2xl
-                  border border-white/[0.08]
+                  border border-white/[0.07]
                   bg-white/[0.02]
-                  p-6
+                  p-5
                   transition-all duration-300
                   hover:-translate-y-1
-                  hover:border-purple-400/25
+                  hover:border-purple-400/20
                   hover:bg-white/[0.035]
-                  hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)]
-                  sm:p-7
+                  hover:shadow-[0_18px_50px_rgba(0,0,0,0.22)]
+                  sm:p-6
                 "
               >
-                {/* Top accent */}
+                {/* Animated top accent */}
                 <div
                   aria-hidden="true"
                   className="
@@ -144,7 +133,7 @@ export default function FutureEnhancements() {
                     h-px w-0
                     bg-purple-400
                     transition-all duration-500
-                    group-hover:w-20
+                    group-hover:w-16
                   "
                 />
 
@@ -153,8 +142,8 @@ export default function FutureEnhancements() {
                   aria-hidden="true"
                   className="
                     pointer-events-none
-                    absolute -right-16 -top-16
-                    h-32 w-32
+                    absolute -right-12 -top-12
+                    h-28 w-28
                     rounded-full
                     bg-purple-500/[0.05]
                     blur-3xl
@@ -164,27 +153,23 @@ export default function FutureEnhancements() {
                   "
                 />
 
-                {/* =================================================
-                    ICON
-                ================================================== */}
-
+                {/* Icon */}
                 <div
                   className="
                     relative
-                    flex h-11 w-11
+                    flex h-10 w-10
                     items-center justify-center
                     rounded-xl
                     border border-purple-400/15
-                    bg-purple-500/[0.06]
+                    bg-purple-500/[0.05]
                     text-purple-300
                     transition-all duration-300
-                    group-hover:border-purple-400/30
-                    group-hover:bg-purple-500/[0.10]
-                    group-hover:text-purple-200
+                    group-hover:border-purple-400/25
+                    group-hover:bg-purple-500/[0.08]
                   "
                 >
                   <Icon
-                    size={20}
+                    size={18}
                     strokeWidth={1.8}
                     aria-hidden="true"
                     className="
@@ -194,23 +179,23 @@ export default function FutureEnhancements() {
                   />
                 </div>
 
-                {/* =================================================
-                    CONTENT
-                ================================================== */}
-
-                <h3 className="relative mt-6 text-xl font-semibold tracking-tight text-white">
+                {/* Content */}
+                <h3 className="relative mt-5 text-lg font-semibold tracking-tight text-white sm:text-xl">
                   {item.title}
                 </h3>
 
-                <p className="relative mt-3 text-sm leading-6 text-zinc-400 sm:text-[15px] sm:leading-7">
+                <p className="relative mt-2.5 text-sm leading-6 text-zinc-400 sm:text-[15px] sm:leading-7">
                   {item.description}
                 </p>
 
-                {/* Future indicator */}
-                <div className="relative mt-6 flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-purple-400/70" />
+                {/* Planned status */}
+                <div className="relative mt-5 flex items-center gap-2">
+                  <span
+                    aria-hidden="true"
+                    className="h-1.5 w-1.5 rounded-full bg-purple-400/70"
+                  />
 
-                  <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-600">
+                  <span className="text-[9px] font-medium uppercase tracking-[0.2em] text-zinc-600">
                     Planned
                   </span>
                 </div>
@@ -220,7 +205,7 @@ export default function FutureEnhancements() {
                   aria-hidden="true"
                   className="
                     absolute bottom-5 right-6
-                    font-mono text-[10px]
+                    font-mono text-[9px]
                     tracking-[0.2em]
                     text-zinc-700
                     transition-colors duration-300
@@ -232,20 +217,6 @@ export default function FutureEnhancements() {
               </article>
             );
           })}
-        </div>
-
-        {/* ===================================================
-            BOTTOM STATEMENT
-        ==================================================== */}
-
-        <div className="mt-10 flex items-center justify-center gap-3 text-center">
-          <span className="h-px w-8 bg-white/[0.08]" />
-
-          <span className="text-xs text-zinc-600">
-            More capabilities are coming
-          </span>
-
-          <span className="h-px w-8 bg-white/[0.08]" />
         </div>
       </div>
     </section>

@@ -10,8 +10,7 @@ const RELEASE_URL =
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-4 pb-20 pt-10 sm:px-6 sm:pb-28 sm:pt-16 lg:pb-32 lg:pt-20">
-      {/* =====================================================
+    <section className="relative overflow-hidden px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-28 lg:pb-20 lg:pt-22">      {/* =====================================================
           BACKGROUND
       ====================================================== */}
 
@@ -45,7 +44,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.12, duration: 0.6 }}
-            className="mx-auto mt-7 max-w-5xl font-bold tracking-[-0.045em] text-white"
+            className="mx-auto mt-6 max-w-5xl font-bold tracking-[-0.045em] text-white"
           >
             {/* Desktop / Tablet */}
             <span className="hidden sm:block">
@@ -70,9 +69,7 @@ export default function Hero() {
 
               <span className="mt-1 block text-[2.75rem] leading-[1.02]">
                 your{" "}
-                <span className="text-purple-300">
-                  coding
-                </span>
+                <span className="text-purple-300">coding</span>
               </span>
 
               <span className="mt-1 block text-[2.75rem] leading-[1.02] text-purple-300">
@@ -90,7 +87,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.5 }}
-            className="mx-auto mt-7 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-lg sm:leading-8"
+            className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-lg sm:leading-8"
           >
             CodeVault detects accepted submissions from LeetCode,
             GeeksforGeeks, and HackerRank, then automatically extracts,
@@ -105,7 +102,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.38, duration: 0.5 }}
-            className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
+            className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
           >
             {/* Download */}
             <a
@@ -158,15 +155,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.7 }}
-          className="mx-auto mt-14 max-w-6xl overflow-hidden rounded-[28px] border border-white/[0.08] bg-[#111113] shadow-[0_30px_100px_rgba(0,0,0,0.4)] sm:mt-20"
+          className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[28px] border border-white/[0.08] bg-[#111113] shadow-[0_30px_100px_rgba(0,0,0,0.4)] sm:mt-14"
         >
           {/* Top bar */}
           <div className="flex items-center justify-between border-b border-white/[0.07] px-5 py-4 sm:px-6">
             <div className="flex items-center gap-2.5">
-              <GitBranch
-                size={15}
-                className="text-purple-400"
-              />
+              <GitBranch size={15} className="text-purple-400" />
 
               <span className="text-xs font-medium uppercase tracking-[0.24em] text-zinc-500">
                 CodeVault Workflow
@@ -205,7 +199,6 @@ export default function Hero() {
                 background.
               </p>
 
-              {/* Workflow steps */}
               <div className="mt-8 grid grid-cols-3 gap-2">
                 {[
                   {
@@ -308,10 +301,7 @@ export default function Hero() {
                   <div className="w-full rounded-xl border border-white/[0.08] bg-white/[0.025] p-4">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10">
-                        <FaGithub
-                          size={21}
-                          className="text-zinc-200"
-                        />
+                        <FaGithub size={21} className="text-zinc-200" />
                       </div>
 
                       <div>
@@ -350,7 +340,7 @@ export default function Hero() {
                   <span className="h-2 w-2 rounded-full bg-emerald-400/70" />
                 </div>
 
-                <pre className="max-w-full overflow-x-auto p-4 text-left font-mono text-[10px] leading-[1.9] text-zinc-500 sm:text-xs">
+                <pre className="max-w-full overflow-x-auto p-4 text-left font-mono text-[11px] leading-[1.6] text-zinc-500 sm:text-[8px]">
                   <span className="text-zinc-200">
                     codevault-solutions/
                   </span>

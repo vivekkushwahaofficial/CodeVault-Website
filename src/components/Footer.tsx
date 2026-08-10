@@ -10,20 +10,13 @@ const OWNER_PROFILE =
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#151515] text-white">
-      <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8 lg:px-10 lg:py-16">
-
-        {/* =====================================================
+      <div className="mx-auto max-w-7xl px-6 pt-10 pb-4 sm:px-8 lg:px-10 lg:pt-12 lg:pb-5">        {/* =====================================================
             TOP FOOTER
         ====================================================== */}
 
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr] lg:gap-16">
-
-          {/* ===================================================
-              BRAND
-          =================================================== */}
-
+        <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr] lg:gap-12">
+          {/* Brand */}
           <div>
-            {/* Logo + Brand */}
             <a
               href="/"
               aria-label="CodeVault Home"
@@ -32,16 +25,20 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="CodeVault logo"
-                className="h-11 w-11 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="
+                  h-10 w-10
+                  object-contain
+                  transition-transform duration-300
+                  group-hover:scale-105
+                "
               />
 
-              <h2 className="text-3xl font-bold tracking-tight text-white">
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 CodeVault
               </h2>
             </a>
 
-            {/* Description */}
-            <p className="mt-5 max-w-md text-sm leading-7 text-zinc-400 sm:text-[15px]">
+            <p className="mt-4 max-w-md text-sm leading-7 text-zinc-400 sm:text-[15px]">
               Automatically organize and sync your coding solutions from
               LeetCode, GeeksforGeeks, and HackerRank directly to GitHub.
             </p>
@@ -53,11 +50,14 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Open CodeVault GitHub repository"
               className="
-                mt-7 inline-flex h-11 w-11 items-center justify-center
-                rounded-xl border border-white/10
-                bg-zinc-900/80 text-white
+                mt-6 inline-flex h-10 w-10
+                items-center justify-center
+                rounded-xl
+                border border-white/10
+                bg-zinc-900/80
+                text-white
                 transition-all duration-300
-                hover:-translate-y-1
+                hover:-translate-y-0.5
                 hover:border-purple-400/40
                 hover:bg-purple-500/10
                 hover:text-purple-300
@@ -68,20 +68,17 @@ export default function Footer() {
                 focus-visible:ring-offset-[#151515]
               "
             >
-              <FaGithub size={19} />
+              <FaGithub size={18} />
             </a>
           </div>
 
-          {/* ===================================================
-              PRODUCT
-          =================================================== */}
-
+          {/* Product */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.32em] text-purple-400">
+            <h3 className="text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
               Product
             </h3>
 
-            <ul className="mt-6 space-y-4 text-sm text-zinc-400">
+            <ul className="mt-5 space-y-3 text-sm text-zinc-400">
               <li>
                 <a
                   href="#features"
@@ -120,16 +117,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ===================================================
-              COMMUNITY
-          =================================================== */}
-
+          {/* Community */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.32em] text-purple-400">
+            <h3 className="text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
               Community
             </h3>
 
-            <ul className="mt-6 space-y-4 text-sm text-zinc-400">
+            <ul className="mt-5 space-y-3 text-sm text-zinc-400">
               <li>
                 <a
                   href={GITHUB}
@@ -170,107 +164,85 @@ export default function Footer() {
             OWNER SECTION
         ====================================================== */}
 
-        <div className="mt-12 border-t border-white/10 pt-10 lg:mt-14 lg:pt-12">
+        <div className="mt-10 border-t border-white/10 pt-8 lg:mt-12 lg:pt-10">
 
           <div
             className="
               group relative overflow-hidden
-              rounded-2xl border border-white/10
-              bg-white/[0.025]
-              px-5 py-6
+              rounded-2xl
+              border border-white/[0.08]
+              bg-white/[0.02]
+              px-5 py-5
               transition-all duration-300
               hover:border-purple-400/20
               hover:bg-white/[0.035]
-              sm:px-7 sm:py-7
-              lg:px-8
+              sm:px-6 sm:py-6
+              lg:px-7
             "
           >
-            {/* Subtle purple glow */}
+            {/* Subtle glow */}
             <div
+              aria-hidden="true"
               className="
-                pointer-events-none absolute
-                -right-20 -top-20
-                h-40 w-40
+                pointer-events-none
+                absolute -right-16 -top-16
+                h-32 w-32
                 rounded-full
                 bg-purple-500/[0.05]
                 blur-3xl
+                opacity-70
                 transition-opacity duration-500
-                group-hover:bg-purple-500/[0.08]
+                group-hover:opacity-100
               "
             />
 
-            {/* Owner Label */}
-            <p className="relative text-xs font-semibold uppercase tracking-[0.32em] text-purple-400">
+            {/* Label */}
+            <p className="relative text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
               Owner
             </p>
 
             {/* Owner Content */}
             <div
               className="
-                relative mt-6
-                grid gap-6
+                relative mt-5
+                grid gap-5
                 lg:grid-cols-[auto_1fr_auto]
                 lg:items-center
-                lg:gap-10
+                lg:gap-8
               "
             >
-
-              {/* =================================================
-                  PROFILE
-              ================================================== */}
-
-              <div className="flex items-center gap-4">
-                <div className="relative shrink-0">
-                  <img
-                    src="/profile.png"
-                    alt="Vivek Kumar"
-                    className="
-                      h-14 w-14
-                      rounded-xl
-                      border border-white/10
-                      object-cover
-                      shadow-lg shadow-black/20
-                    "
-                  />
-
-                  {/* Online indicator */}
-                  {/* <span
-                    className="
-                      absolute -bottom-1 -right-1
-                      h-3 w-3
-                      rounded-full
-                      border-2
-                      border-[#151515]
-                      bg-emerald-400
-                    "
-                    aria-hidden="true"
-                  /> */}
-                </div>
+              {/* Profile */}
+              <div className="flex items-center gap-3.5">
+                <img
+                  src="/profile.png"
+                  alt="Vivek Kumar"
+                  className="
+                    h-12 w-12
+                    rounded-xl
+                    border border-white/10
+                    object-cover
+                    shadow-lg shadow-black/20
+                  "
+                />
 
                 <div>
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-sm font-semibold text-white sm:text-base">
                     Vivek Kumar
                   </h3>
 
-                  <p className="mt-1 text-sm text-zinc-400">
+                  <p className="mt-0.5 text-xs text-zinc-400 sm:text-sm">
                     Founder & Maintainer
                   </p>
                 </div>
               </div>
 
-              {/* =================================================
-                  OWNER DESCRIPTION
-              ================================================== */}
-
+              {/* Description */}
               <p className="max-w-2xl text-sm leading-6 text-zinc-400">
                 Building CodeVault to help developers organize and sync
                 coding solutions automatically.
               </p>
 
-              {/* =================================================
-                  OWNER PROFILE LINK
-              ================================================== */}
-
+              {/* Profile Link */}
               <a
                 href={OWNER_PROFILE}
                 target="_blank"
@@ -292,12 +264,12 @@ export default function Footer() {
                 <span>View Owner Profile</span>
 
                 <span
+                  aria-hidden="true"
                   className="
                     ml-2
                     transition-transform duration-200
                     group-hover/link:translate-x-1
                   "
-                  aria-hidden="true"
                 >
                   →
                 </span>
@@ -310,25 +282,23 @@ export default function Footer() {
             BOTTOM FOOTER
         ====================================================== */}
 
-        <div className="mt-10 border-t border-white/10 pt-6 lg:mt-12">
+        <div className="mt-8 border-t border-white/10 pt-5 lg:mt-10">
 
           <div
             className="
-              flex flex-col gap-5
-              text-center text-sm text-zinc-500
+              flex flex-col gap-4
+              text-center text-xs text-zinc-500
               md:flex-row
               md:items-center
               md:justify-between
               md:text-left
             "
           >
-            {/* Copyright */}
             <p>
               © {new Date().getFullYear()} CodeVault. All rights reserved.
             </p>
 
-            {/* Bottom Links */}
-            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 md:justify-end">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:justify-end">
               <Link
                 to="/privacy"
                 className="transition-colors duration-200 hover:text-white"
@@ -351,6 +321,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
       </div>
     </footer>
   );
