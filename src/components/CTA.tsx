@@ -1,69 +1,190 @@
-import { GitBranch, Download } from "lucide-react";
+import {
+  FolderGit2,
+  FileText,
+  Database,
+  ShieldCheck,
+  Zap,
+  GitBranch,
+} from "lucide-react";
 
-export default function CTA() {
+const features = [
+  {
+    icon: GitBranch,
+    title: "GitHub Sync",
+    description:
+      "Automatically push every accepted solution directly to GitHub.",
+  },
+  {
+    icon: FolderGit2,
+    title: "Smart Organization",
+    description:
+      "Organize solutions by platform, difficulty, topic and programming language.",
+  },
+  {
+    icon: FileText,
+    title: "README Generator",
+    description:
+      "Keep your repository updated with statistics, badges and progress automatically.",
+  },
+  {
+    icon: Database,
+    title: "Metadata Extraction",
+    description:
+      "Capture problem name, tags, difficulty, language and submission date.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Duplicate Detection",
+    description:
+      "Never commit the same solution twice. CodeVault detects duplicates automatically.",
+  },
+  {
+    icon: Zap,
+    title: "One Click Setup",
+    description:
+      "Authenticate with GitHub once and let CodeVault handle everything afterwards.",
+  },
+];
+
+export default function Features() {
   return (
     <section
-      id="download"
-      className="border-t border-white/10 bg-[#0b0b0f] py-24"
+      id="features"
+      className="
+        relative overflow-hidden
+        border-t border-white/[0.06]
+        px-5 py-20
+        sm:px-6 sm:py-24
+        lg:px-8 lg:py-28
+      "
     >
-      <div className="mx-auto max-w-5xl px-6 text-center">
-        <span className="text-sm font-semibold uppercase tracking-[0.35em] text-purple-400">
-          Get Started
-        </span>
+      {/* Subtle background glow */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute left-1/2 top-0
+          h-[420px] w-[700px]
+          -translate-x-1/2
+          rounded-full
+          bg-purple-600/[0.025]
+          blur-[120px]
+        "
+      />
 
-        <h2 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
-          Ready to Automate
-          <br />
-          Your Coding Journey?
-        </h2>
+      <div className="relative mx-auto max-w-7xl">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center gap-3">
+            <span aria-hidden="true" className="h-px w-7 bg-purple-400/60" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
+              Features
+            </span>
+            <span aria-hidden="true" className="h-px w-7 bg-purple-400/60" />
+          </div>
 
-        <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-zinc-400 md:text-lg">
-          Stop manually organizing coding solutions. Install CodeVault and let
-          every accepted submission be automatically synchronized with your
-          GitHub portfolio.
-        </p>
+          <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white sm:text-5xl lg:text-[3.25rem]">
+            Everything You Need.
+          </h2>
 
-        <div className="mt-14 flex flex-col justify-center gap-4 sm:flex-row sm:gap-5">
-          <a
-            href="https://github.com/vivekkushwahaofficial/CodeVault/releases/latest"
-            className="inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-          >
-            <Download size={18} />
-            Download Extension
-          </a>
-
-          <a
-            href="https://github.com/vivekkushwahaofficial/CodeVault"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-7 py-4 text-base font-semibold text-white transition-all duration-300 hover:border-purple-500/60 hover:bg-white/10 hover:shadow-[0_0_24px_rgba(168,85,247,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-          >
-            <GitBranch size={18} />
-            Star on GitHub
-          </a>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
+            CodeVault automates your coding portfolio, GitHub repository,
+            and solution management with zero repetitive work.
+          </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
-          <div>
-            <h3 className="text-3xl font-bold tracking-tight text-white">3</h3>
-            <p className="mt-2 text-zinc-400">
-              Supported Platforms
-            </p>
-          </div>
+        <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
 
-          <div>
-            <h3 className="text-3xl font-bold tracking-tight text-white">100%</h3>
-            <p className="mt-2 text-zinc-400">
-              Open Source
-            </p>
-          </div>
+            return (
+              <article
+                key={feature.title}
+                className="
+                  group relative overflow-hidden
+                  rounded-2xl
+                  border border-white/[0.07]
+                  bg-white/[0.02]
+                  p-5
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-purple-400/20
+                  hover:bg-white/[0.035]
+                  hover:shadow-[0_18px_50px_rgba(0,0,0,0.22)]
+                  sm:p-6
+                "
+              >
+                <div
+                  aria-hidden="true"
+                  className="
+                    absolute left-0 top-0
+                    h-px w-0
+                    bg-purple-400
+                    transition-all duration-500
+                    group-hover:w-16
+                  "
+                />
 
-          <div>
-            <h3 className="text-3xl font-bold tracking-tight text-white">∞</h3>
-            <p className="mt-2 text-zinc-400">
-              Future Possibilities
-            </p>
-          </div>
+                <div
+                  aria-hidden="true"
+                  className="
+                    pointer-events-none
+                    absolute -right-12 -top-12
+                    h-28 w-28
+                    rounded-full
+                    bg-purple-500/[0.05]
+                    blur-3xl
+                    opacity-0
+                    transition-opacity duration-500
+                    group-hover:opacity-100
+                  "
+                />
+
+                <div
+                  className="
+                    relative
+                    flex h-10 w-10
+                    items-center justify-center
+                    rounded-xl
+                    border border-purple-400/15
+                    bg-purple-500/[0.05]
+                    text-purple-300
+                    transition-all duration-300
+                    group-hover:border-purple-400/25
+                    group-hover:bg-purple-500/[0.08]
+                  "
+                >
+                  <Icon
+                    size={18}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                <h3 className="relative mt-5 text-lg font-semibold tracking-tight text-white sm:text-xl">
+                  {feature.title}
+                </h3>
+
+                <p className="relative mt-2.5 text-sm leading-6 text-zinc-400 sm:text-[15px] sm:leading-7">
+                  {feature.description}
+                </p>
+
+                <span
+                  aria-hidden="true"
+                  className="
+                    absolute bottom-5 right-6
+                    font-mono text-[9px]
+                    tracking-[0.2em]
+                    text-zinc-700
+                    transition-colors duration-300
+                    group-hover:text-purple-400/40
+                  "
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
