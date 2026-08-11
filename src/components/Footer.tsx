@@ -4,13 +4,17 @@ import { Link } from "react-router-dom";
 const GITHUB =
   "https://github.com/vivekkushwahaofficial/CodeVault";
 
+const GITLAB =
+  "https://gitlab.com/vivekkushwahaofficial/codevault";
+
 const OWNER_PROFILE =
   "https://vivekkushwahaofficial.tech/";
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#151515] text-white">
-      <div className="mx-auto max-w-7xl px-6 pt-10 pb-4 sm:px-8 lg:px-10 lg:pt-12 lg:pb-5">        {/* =====================================================
+      <div className="mx-auto max-w-7xl px-6 pt-10 pb-4 sm:px-8 lg:px-10 lg:pt-12 lg:pb-5">
+        {/* =====================================================
             TOP FOOTER
         ====================================================== */}
 
@@ -137,6 +141,17 @@ export default function Footer() {
 
               <li>
                 <a
+                  href={GITLAB}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  GitLab
+                </a>
+              </li>
+
+              <li>
+                <a
                   href={`${GITHUB}/issues`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -165,7 +180,6 @@ export default function Footer() {
         ====================================================== */}
 
         <div className="mt-10 border-t border-white/10 pt-8 lg:mt-12 lg:pt-10">
-
           <div
             className="
               group relative overflow-hidden
@@ -283,7 +297,6 @@ export default function Footer() {
         ====================================================== */}
 
         <div className="mt-8 border-t border-white/10 pt-5 lg:mt-10">
-
           <div
             className="
               flex flex-col gap-4
@@ -321,7 +334,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
       </div>
     </footer>
   );
