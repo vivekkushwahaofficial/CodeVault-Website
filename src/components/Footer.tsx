@@ -328,7 +328,7 @@ export default function Footer() {
                 GitHub
               </a>
 
-              <span>MIT License</span>
+              <span>Apache License 2.0</span>
 
               <span>Built for Developers</span>
             </div>

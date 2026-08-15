@@ -45,4 +45,4 @@ Contributions, feature requests, and bug reports are welcome.
 
 ## 📄 License
 
-Licensed under the **MIT License**.
+Licensed under the **Apache License 2.0**.
