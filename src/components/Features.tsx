@@ -3,8 +3,8 @@ import {
   FileText,
   Database,
   ShieldCheck,
-  Zap,
   GitBranch,
+  BarChart3,
 } from "lucide-react";
 
 const features = [
@@ -12,7 +12,7 @@ const features = [
     icon: GitBranch,
     title: "GitHub Sync",
     description:
-      "Automatically push every accepted solution directly to GitHub.",
+      "Authenticate with GitHub once and automatically push every accepted solution directly to your repository.",
   },
   {
     icon: FolderGit2,
@@ -39,10 +39,10 @@ const features = [
       "Never commit the same solution twice. CodeVault detects duplicates automatically.",
   },
   {
-    icon: Zap,
-    title: "One Click Setup",
+    icon: BarChart3,
+    title: "Portfolio Statistics",
     description:
-      "Authenticate with GitHub once and let CodeVault handle everything afterwards.",
+      "Automatically track Basic, Easy, Medium and Hard problems with platform, language, pattern and topic statistics.",
   },
 ];
 
@@ -73,10 +73,8 @@ export default function Features() {
       />
 
       <div className="relative mx-auto max-w-7xl">
-
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
-
           <div className="inline-flex items-center gap-3">
             <span
               aria-hidden="true"
