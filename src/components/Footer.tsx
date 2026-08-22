@@ -21,8 +21,9 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr] lg:gap-12">
           {/* Brand */}
           <div>
-            <a
-              href="/"
+            <Link
+              to="/"
+              onClick={() => window.scrollTo(0, 0)}
               aria-label="CodeVault Home"
               className="group inline-flex items-center gap-3"
             >
@@ -40,7 +41,7 @@ export default function Footer() {
               <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 CodeVault
               </h2>
-            </a>
+            </Link>
 
             <p className="mt-4 max-w-md text-sm leading-7 text-zinc-400 sm:text-[15px]">
               Automatically organize and sync your coding solutions from

@@ -16,16 +16,16 @@ const steps = [
   },
   {
     number: "02",
-    title: "CodeVault Detects",
+    title: "CodeVault Detects & Organizes",
     description:
-      "The extension automatically detects an accepted submission and extracts your solution and problem metadata.",
+      "CodeVault detects the accepted submission, extracts the solution and metadata, classifies patterns and topics, and prepares the repository files.",
     icon: GitBranch,
   },
   {
     number: "03",
-    title: "Push to GitHub",
+    title: "Commit & Push to GitHub",
     description:
-      "CodeVault organizes your solution, prevents duplicate syncs, commits the files, and pushes them directly to GitHub.",
+      "CodeVault prevents duplicate syncs, updates the repository indexes and README, and commits the solution directly to GitHub.",
     icon: Upload,
   },
 ];

@@ -12,37 +12,37 @@ const futureEnhancements = [
     icon: Globe2,
     title: "Expanded Platform Support",
     description:
-      "Support for Codeforces, CodeChef, AtCoder, and more coding platforms.",
+      "Add Codeforces, CodeChef, AtCoder, and additional coding platforms to CodeVault.",
   },
   {
     icon: Bot,
-    title: "AI-Powered Classification",
+    title: "Advanced AI Assistance",
     description:
-      "Automatically detect problem patterns, topics, tags, and estimate complexity.",
+      "Introduce AI-powered explanations, solution notes, interview questions, and personalized coding insights.",
   },
   {
     icon: BarChart3,
     title: "Analytics Dashboard",
     description:
-      "Track progress, streaks, language usage, platform statistics, and coding insights.",
+      "Provide deeper progress analytics, streaks, platform comparisons, language usage, and coding trends.",
   },
   {
     icon: CalendarClock,
     title: "Smart Revision System",
     description:
-      "Receive automated reminders to revisit solved problems using spaced repetition.",
+      "Add spaced-repetition reminders and personalized revision schedules for previously solved problems.",
   },
   {
     icon: FolderKanban,
-    title: "Portfolio Generator",
+    title: "Developer Portfolio",
     description:
-      "Generate a professional coding portfolio with README, heatmaps, and achievements.",
+      "Expand the existing portfolio into a richer developer profile with achievements, insights, and progress highlights.",
   },
   {
     icon: Search,
     title: "Advanced Search",
     description:
-      "Quickly find solutions by platform, difficulty, topic, pattern, language, or tags.",
+      "Provide faster and more flexible solution discovery across platforms, difficulty, topics, patterns, languages, and tags.",
   },
 ];
 

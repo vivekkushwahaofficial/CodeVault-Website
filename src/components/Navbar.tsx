@@ -6,6 +6,9 @@ import { ArrowUpRight, Download, Menu, X } from "lucide-react";
 const GITHUB =
   "https://github.com/vivekkushwahaofficial/CodeVault";
 
+const RELEASE_URL =
+  "https://github.com/vivekkushwahaofficial/CodeVault/releases/latest";
+
 const navItems = [
   {
     label: "Features",
@@ -55,18 +58,26 @@ export default function Navbar() {
   useEffect(() => {
     const sections = navItems
       .map((item) => document.querySelector(item.href))
-      .filter(Boolean);
+      .filter((section): section is Element => Boolean(section));
 
-    if (!sections.length) return;
+    if (!sections.length) {
+      return;
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
         const visibleSection = entries
           .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          .sort(
+            (a, b) =>
+              b.intersectionRatio -
+              a.intersectionRatio,
+          )[0];
 
         if (visibleSection?.target.id) {
-          setActiveSection(`#${visibleSection.target.id}`);
+          setActiveSection(
+            `#${visibleSection.target.id}`,
+          );
         }
       },
       {
@@ -76,10 +87,12 @@ export default function Navbar() {
     );
 
     sections.forEach((section) => {
-      if (section) observer.observe(section);
+      observer.observe(section);
     });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   /* =====================================================
@@ -88,6 +101,36 @@ export default function Navbar() {
 
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  /* =====================================================
+     INTERNAL NAVIGATION
+  ====================================================== */
+
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    event.preventDefault();
+
+    const target = document.querySelector(href);
+
+    if (!target) {
+      return;
+    }
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.replaceState(
+      null,
+      "",
+      href,
+    );
+
+    closeMenu();
   };
 
   return (
@@ -132,12 +175,19 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           {navItems.map((item) => {
-            const isActive = activeSection === item.href;
+            const isActive =
+              activeSection === item.href;
 
             return (
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(event) =>
+                  handleNavClick(
+                    event,
+                    item.href,
+                  )
+                }
                 className={[
                   "relative rounded-xl px-4 py-2 text-sm",
                   "transition-colors duration-200",
@@ -153,7 +203,9 @@ export default function Navbar() {
                   className={[
                     "absolute bottom-0 left-1/2 h-px -translate-x-1/2",
                     "bg-purple-400 transition-all duration-300",
-                    isActive ? "w-8 opacity-100" : "w-0 opacity-0",
+                    isActive
+                      ? "w-8 opacity-100"
+                      : "w-0 opacity-0",
                   ].join(" ")}
                 />
               </a>
@@ -190,7 +242,7 @@ export default function Navbar() {
 
           {/* Desktop Download */}
           <a
-            href="https://github.com/vivekkushwahaofficial/CodeVault/releases/latest"
+            href={RELEASE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="group hidden items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:border-purple-400/40 hover:bg-white/[0.08] md:inline-flex"
@@ -211,12 +263,24 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <button
             type="button"
-            onClick={() => setIsOpen((previous) => !previous)}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
+            onClick={() =>
+              setIsOpen(
+                (previous) => !previous,
+              )
+            }
+            aria-label={
+              isOpen
+                ? "Close menu"
+                : "Open menu"
+            }
             aria-expanded={isOpen}
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-zinc-300 transition-colors hover:bg-white/[0.07] hover:text-white md:hidden"
           >
-            {isOpen ? <X size={19} /> : <Menu size={19} />}
+            {isOpen ? (
+              <X size={19} />
+            ) : (
+              <Menu size={19} />
+            )}
           </button>
         </div>
       </div>
@@ -232,13 +296,19 @@ export default function Navbar() {
             aria-label="Mobile navigation"
           >
             {navItems.map((item) => {
-              const isActive = activeSection === item.href;
+              const isActive =
+                activeSection === item.href;
 
               return (
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={closeMenu}
+                  onClick={(event) =>
+                    handleNavClick(
+                      event,
+                      item.href,
+                    )
+                  }
                   className={[
                     "rounded-xl px-4 py-3.5 text-sm",
                     "transition-colors duration-200",
@@ -263,7 +333,7 @@ export default function Navbar() {
             <div className="my-1 border-t border-white/10" />
 
             <a
-              href="https://github.com/vivekkushwahaofficial/CodeVault/releases/latest"
+              href={RELEASE_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}

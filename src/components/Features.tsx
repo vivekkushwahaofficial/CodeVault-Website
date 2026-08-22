@@ -5,6 +5,7 @@ import {
   ShieldCheck,
   GitBranch,
   BarChart3,
+    Search,
 } from "lucide-react";
 
 const features = [
@@ -18,31 +19,49 @@ const features = [
     icon: FolderGit2,
     title: "Smart Organization",
     description:
-      "Organize solutions by platform, difficulty, topic and programming language.",
+      "Automatically organize solutions by platform, difficulty, topic, pattern, and programming language.",
   },
   {
     icon: FileText,
     title: "README Generator",
     description:
-      "Keep your repository updated with statistics, badges and progress automatically.",
+      "Keep your repository portfolio updated with statistics, progress, coding activity, and solution indexes.",
   },
   {
     icon: Database,
     title: "Metadata Extraction",
     description:
-      "Capture problem name, tags, difficulty, language and submission date.",
+      "Capture problem name, difficulty, platform, language, tags, complexity, and solved date automatically.",
   },
   {
     icon: ShieldCheck,
     title: "Duplicate Detection",
     description:
-      "Never commit the same solution twice. CodeVault detects duplicates automatically.",
+      "Prevent duplicate commits by detecting solutions that have already been synchronized to your repository.",
   },
   {
     icon: BarChart3,
     title: "Portfolio Statistics",
     description:
-      "Automatically track Basic, Easy, Medium and Hard problems with platform, language, pattern and topic statistics.",
+      "Track Basic, Easy, Medium, and Hard problems across platforms, languages, patterns, and topics.",
+  },
+  {
+    icon: BarChart3,
+    title: "Coding Activity Heatmap",
+    description:
+      "Generate a GitHub-compatible 365-day activity heatmap from your solved problem history.",
+  },
+  {
+    icon: FolderGit2,
+    title: "Pattern & Topic Organization",
+    description:
+      "Automatically organize and index solutions by detected patterns, topics, and problem tags.",
+  },
+  {
+    icon: Search,
+    title: "Solution Search",
+    description:
+      "Find organized solutions using problem names, platforms, difficulty, topics, patterns, and languages.",
   },
 ];
 

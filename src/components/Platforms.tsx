@@ -109,7 +109,8 @@ export default function Platforms() {
 
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
             Start with LeetCode, GeeksforGeeks, and HackerRank today.
-            More platforms are being added as CodeVault evolves.
+            CodeVault automatically detects accepted submissions and synchronizes
+            your solutions to GitHub.
           </p>
         </div>
 

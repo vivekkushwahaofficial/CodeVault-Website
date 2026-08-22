@@ -1,55 +1,16 @@
-import {
-  FolderGit2,
-  FileText,
-  Database,
-  ShieldCheck,
-  Zap,
-  GitBranch,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Download } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
-const features = [
-  {
-    icon: GitBranch,
-    title: "GitHub Sync",
-    description:
-      "Automatically push every accepted solution directly to GitHub.",
-  },
-  {
-    icon: FolderGit2,
-    title: "Smart Organization",
-    description:
-      "Organize solutions by platform, difficulty, topic and programming language.",
-  },
-  {
-    icon: FileText,
-    title: "README Generator",
-    description:
-      "Keep your repository updated with statistics, badges and progress automatically.",
-  },
-  {
-    icon: Database,
-    title: "Metadata Extraction",
-    description:
-      "Capture problem name, tags, difficulty, language and submission date.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Duplicate Detection",
-    description:
-      "Never commit the same solution twice. CodeVault detects duplicates automatically.",
-  },
-  {
-    icon: Zap,
-    title: "One Click Setup",
-    description:
-      "Authenticate with GitHub once and let CodeVault handle everything afterwards.",
-  },
-];
+const GITHUB_URL =
+  "https://github.com/vivekkushwahaofficial/CodeVault";
 
-export default function Features() {
+const RELEASE_URL =
+  "https://github.com/vivekkushwahaofficial/CodeVault/releases/latest";
+
+export default function CTA() {
   return (
     <section
-      id="features"
+      id="download"
       className="
         relative overflow-hidden
         border-t border-white/[0.06]
@@ -67,124 +28,234 @@ export default function Features() {
           h-[420px] w-[700px]
           -translate-x-1/2
           rounded-full
-          bg-purple-600/[0.025]
+          bg-purple-600/[0.045]
           blur-[120px]
         "
       />
 
-      <div className="relative mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-3">
-            <span aria-hidden="true" className="h-px w-7 bg-purple-400/60" />
+      <div className="relative mx-auto max-w-5xl">
+        <div
+          className="
+            relative overflow-hidden
+            rounded-[28px]
+            border border-white/[0.08]
+            bg-white/[0.02]
+            px-6 py-10
+            text-center
+            shadow-[0_30px_100px_rgba(0,0,0,0.3)]
+            sm:px-10 sm:py-14
+            lg:px-16 lg:py-16
+          "
+        >
+          {/* Inner glow */}
+          <div
+            aria-hidden="true"
+            className="
+              pointer-events-none
+              absolute left-1/2 top-0
+              h-40 w-96
+              -translate-x-1/2
+              rounded-full
+              bg-purple-500/[0.07]
+              blur-[90px]
+            "
+          />
+
+          {/* Label */}
+          <div className="relative inline-flex items-center gap-3">
+            <span
+              aria-hidden="true"
+              className="h-px w-7 bg-purple-400/60"
+            />
+
             <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
-              Features
+              Get Started
             </span>
-            <span aria-hidden="true" className="h-px w-7 bg-purple-400/60" />
+
+            <span
+              aria-hidden="true"
+              className="h-px w-7 bg-purple-400/60"
+            />
           </div>
 
-          <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white sm:text-5xl lg:text-[3.25rem]">
-            Everything You Need.
+          {/* Heading */}
+          <h2
+            className="
+              relative mx-auto mt-5
+              max-w-3xl
+              text-3xl font-bold
+              tracking-[-0.04em]
+              text-white
+              sm:text-4xl
+              lg:text-5xl
+            "
+          >
+            Ready to organize
+            <br />
+            <span className="text-purple-300">
+              your coding journey?
+            </span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
-            CodeVault automates your coding portfolio, GitHub repository,
-            and solution management with zero repetitive work.
+          {/* Description */}
+          <p
+            className="
+              relative mx-auto mt-5
+              max-w-2xl
+              text-sm leading-7
+              text-zinc-400
+              sm:text-base sm:leading-8
+            "
+          >
+            Let CodeVault automatically detect, organize, and synchronize
+            your accepted coding solutions while you focus on solving problems.
           </p>
-        </div>
 
-        <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-
-            return (
-              <article
-                key={feature.title}
+          {/* Actions */}
+          <div
+            className="
+              relative mt-8
+              flex flex-col
+              items-stretch justify-center
+              gap-3
+              sm:flex-row sm:items-center
+            "
+          >
+            {/* Download */}
+            <a
+              href={RELEASE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group
+                inline-flex items-center justify-center gap-2.5
+                rounded-xl
+                bg-purple-500
+                px-6 py-3.5
+                text-sm font-semibold
+                text-white
+                shadow-[0_8px_30px_rgba(168,85,247,0.18)]
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:bg-purple-400
+                hover:shadow-[0_12px_35px_rgba(168,85,247,0.28)]
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-purple-400
+                focus-visible:ring-offset-2
+                focus-visible:ring-offset-black
+              "
+            >
+              <Download
+                size={17}
+                strokeWidth={2.2}
                 className="
-                  group relative overflow-hidden
-                  rounded-2xl
-                  border border-white/[0.07]
-                  bg-white/[0.02]
-                  p-5
-                  transition-all duration-300
-                  hover:-translate-y-1
-                  hover:border-purple-400/20
-                  hover:bg-white/[0.035]
-                  hover:shadow-[0_18px_50px_rgba(0,0,0,0.22)]
-                  sm:p-6
+                  transition-transform duration-300
+                  group-hover:-translate-y-0.5
                 "
-              >
-                <div
-                  aria-hidden="true"
-                  className="
-                    absolute left-0 top-0
-                    h-px w-0
-                    bg-purple-400
-                    transition-all duration-500
-                    group-hover:w-16
-                  "
-                />
+              />
 
-                <div
-                  aria-hidden="true"
-                  className="
-                    pointer-events-none
-                    absolute -right-12 -top-12
-                    h-28 w-28
-                    rounded-full
-                    bg-purple-500/[0.05]
-                    blur-3xl
-                    opacity-0
-                    transition-opacity duration-500
-                    group-hover:opacity-100
-                  "
-                />
+              Download Extension
 
-                <div
-                  className="
-                    relative
-                    flex h-10 w-10
-                    items-center justify-center
-                    rounded-xl
-                    border border-purple-400/15
-                    bg-purple-500/[0.05]
-                    text-purple-300
-                    transition-all duration-300
-                    group-hover:border-purple-400/25
-                    group-hover:bg-purple-500/[0.08]
-                  "
-                >
-                  <Icon
-                    size={18}
-                    strokeWidth={1.8}
-                    aria-hidden="true"
-                    className="transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+              <ArrowRight
+                size={16}
+                className="
+                  transition-transform duration-300
+                  group-hover:translate-x-0.5
+                "
+              />
+            </a>
 
-                <h3 className="relative mt-5 text-lg font-semibold tracking-tight text-white sm:text-xl">
-                  {feature.title}
-                </h3>
+            {/* GitHub */}
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group
+                inline-flex items-center justify-center gap-2.5
+                rounded-xl
+                border border-white/10
+                bg-white/[0.035]
+                px-6 py-3.5
+                text-sm font-semibold
+                text-zinc-200
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:border-purple-400/30
+                hover:bg-white/[0.06]
+                hover:text-white
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-purple-400
+                focus-visible:ring-offset-2
+                focus-visible:ring-offset-black
+              "
+            >
+              <FaGithub
+                size={17}
+                className="
+    transition-transform duration-300
+    group-hover:scale-105
+  "
+              />
 
-                <p className="relative mt-2.5 text-sm leading-6 text-zinc-400 sm:text-[15px] sm:leading-7">
-                  {feature.description}
-                </p>
+              View on GitHub
 
-                <span
-                  aria-hidden="true"
-                  className="
-                    absolute bottom-5 right-6
-                    font-mono text-[9px]
-                    tracking-[0.2em]
-                    text-zinc-700
-                    transition-colors duration-300
-                    group-hover:text-purple-400/40
-                  "
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              </article>
-            );
-          })}
+              <ArrowRight
+                size={16}
+                className="
+                  transition-transform duration-300
+                  group-hover:translate-x-0.5
+                "
+              />
+            </a>
+          </div>
+
+          {/* Trust points */}
+          <div
+            className="
+              relative mt-8
+              flex flex-wrap
+              items-center justify-center
+              gap-x-6 gap-y-2
+              text-[10px]
+              uppercase tracking-[0.16em]
+              text-zinc-600
+              sm:text-[11px]
+            "
+          >
+            <span className="inline-flex items-center gap-2">
+              <CheckCircle2
+                size={13}
+                className="text-emerald-400"
+                aria-hidden="true"
+              />
+              GitHub Sync
+            </span>
+
+            <span className="hidden h-3 w-px bg-white/10 sm:block" />
+
+            <span className="inline-flex items-center gap-2">
+              <CheckCircle2
+                size={13}
+                className="text-emerald-400"
+                aria-hidden="true"
+              />
+              Multi-Platform
+            </span>
+
+            <span className="hidden h-3 w-px bg-white/10 sm:block" />
+
+            <span className="inline-flex items-center gap-2">
+              <CheckCircle2
+                size={13}
+                className="text-emerald-400"
+                aria-hidden="true"
+              />
+              Portfolio Ready
+            </span>
+          </div>
         </div>
       </div>
     </section>

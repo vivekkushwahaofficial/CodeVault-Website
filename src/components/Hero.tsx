@@ -31,8 +31,7 @@ export default function Hero() {
           >
             <span className="h-1.5 w-1.5 rounded-full bg-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.8)]" />
 
-            <span>v1.3.2 Released</span>
-
+            <span>v1.4.0 Released</span>
             <ArrowUpRight size={13} />
           </motion.div>
 
@@ -91,7 +90,7 @@ export default function Hero() {
           >
             CodeVault detects accepted submissions from LeetCode,
             GeeksforGeeks, and HackerRank, then automatically extracts,
-            organizes, and pushes your solutions directly to GitHub.
+            organizes, analyzes, and pushes your solutions directly to GitHub.
           </motion.p>
 
           {/* =================================================
