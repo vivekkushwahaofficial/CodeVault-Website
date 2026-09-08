@@ -18,10 +18,9 @@ const sections = [
     title: "What CodeVault Does",
     content: (
       <p>
-        CodeVault automatically detects accepted coding submissions on
-        supported coding platforms and allows users to synchronize their
-        solutions to their own GitHub repositories after authenticating
-        with GitHub.
+        CodeVault detects accepted coding submissions on supported coding
+        platforms and helps users synchronize their coding solutions and related
+        information to a GitHub repository selected by the user.
       </p>
     ),
   },
@@ -31,16 +30,24 @@ const sections = [
     content: (
       <ul className="list-disc space-y-1.5 pl-5">
         <li>
-          GitHub authentication information through GitHub OAuth.
+          GitHub account information obtained through GitHub OAuth, such as
+          GitHub username, user ID, name, email address when available, and
+          profile information.
         </li>
 
         <li>
-          Selected GitHub repository and extension preferences.
+          GitHub authentication information required to authorize GitHub
+          operations.
         </li>
 
         <li>
-          Accepted coding solutions and problem metadata that the user
-          chooses to synchronize.
+          Selected GitHub repository, branch, and extension configuration.
+        </li>
+
+        <li>
+          Accepted coding solutions, source code, problem information, and
+          related metadata from supported coding platforms when the user
+          synchronizes a solution.
         </li>
       </ul>
     ),
@@ -52,17 +59,18 @@ const sections = [
       <ul className="list-disc space-y-1.5 pl-5">
         <li>Authenticate your GitHub account.</li>
 
-        <li>
-          Upload coding solutions to repositories you select.
-        </li>
+        <li>Identify the GitHub account and repository you have authorized.</li>
+
+        <li>Upload and update coding solutions in repositories you select.</li>
 
         <li>
-          Remember your extension settings and preferences.
+          Detect accepted coding submissions and collect the information
+          required for synchronization.
         </li>
 
-        <li>
-          Provide the functionality of the extension.
-        </li>
+        <li>Store your extension settings and repository configuration.</li>
+
+        <li>Provide and maintain CodeVault&apos;s functionality.</li>
       </ul>
     ),
   },
@@ -71,8 +79,18 @@ const sections = [
     title: "Data Storage",
     content: (
       <p>
-        Extension settings and authentication state are stored locally in
-        your browser. CodeVault does not sell your personal information.
+        CodeVault stores extension settings and GitHub authentication
+        information locally in the user&apos;s browser.
+        <br />
+        <br />
+        During GitHub authentication, CodeVault sends the GitHub OAuth
+        authorization code to the CodeVault backend so it can exchange the code
+        with GitHub for an access token. The resulting access token is returned
+        to the extension and stored locally in the browser for authorized GitHub
+        operations.
+        <br />
+        <br />
+        CodeVault does not sell user information.
       </p>
     ),
   },
@@ -81,9 +99,21 @@ const sections = [
     title: "Third-Party Services",
     content: (
       <ul className="list-disc space-y-1.5 pl-5">
-        <li>GitHub</li>
-        <li>GitHub API</li>
-        <li>CodeVault Backend</li>
+        <li>
+          <strong className="text-zinc-300">GitHub</strong> — authentication and
+          repository operations.
+        </li>
+
+        <li>
+          <strong className="text-zinc-300">GitHub API</strong> — retrieving
+          authorized GitHub account information and performing repository
+          operations.
+        </li>
+
+        <li>
+          <strong className="text-zinc-300">CodeVault Backend</strong> —
+          facilitating the GitHub OAuth authorization-code exchange.
+        </li>
       </ul>
     ),
   },
@@ -92,9 +122,17 @@ const sections = [
     title: "Data Sharing",
     content: (
       <p>
-        CodeVault does not sell, rent, or trade your personal information.
-        Information is shared only with services necessary to provide the
-        extension&apos;s functionality.
+        CodeVault does not sell, rent, or trade user information.
+        <br />
+        <br />
+        Information is shared only with services required to provide
+        CodeVault&apos;s functionality. This includes sending the GitHub OAuth
+        authorization code to the CodeVault backend and sending authorized
+        repository operations to GitHub.
+        <br />
+        <br />
+        CodeVault does not use user information for advertising,
+        creditworthiness, lending, or unrelated purposes.
       </p>
     ),
   },
@@ -103,25 +141,46 @@ const sections = [
     title: "Security",
     content: (
       <p>
-        GitHub authentication is handled securely using GitHub OAuth.
-        Access tokens are used only for authorized GitHub operations.
+        CodeVault uses GitHub OAuth for authentication. The GitHub OAuth
+        authorization code is exchanged through the CodeVault backend, and the
+        resulting access token is stored locally in the user&apos;s browser and
+        used for authorized GitHub operations.
+        <br />
+        <br />
+        CodeVault does not intentionally collect or store GitHub passwords.
       </p>
     ),
   },
   {
     number: "08",
+    title: "Data Retention and Removal",
+    content: (
+      <p>
+        GitHub authentication information and repository configuration remain in
+        the user&apos;s browser until the user disconnects GitHub or clears the
+        extension&apos;s stored data.
+        <br />
+        <br />
+        Users can revoke CodeVault&apos;s GitHub authorization through their
+        GitHub account settings. Removing the extension also removes its locally
+        stored extension data according to the browser&apos;s extension-data
+        handling.
+      </p>
+    ),
+  },
+  {
+    number: "09",
     title: "Changes to This Policy",
     content: (
       <p>
-        This Privacy Policy may be updated as CodeVault evolves. Updates
-        will always be published on this page.
+        This Privacy Policy may be updated as CodeVault evolves. Any updates
+        will be published on this page.
       </p>
     ),
   },
 ];
 
-const GITHUB_URL =
-  "https://github.com/vivekkushwahaofficial/CodeVault";
+const GITHUB_URL = "https://github.com/vivekkushwahaofficial/CodeVault";
 
 const RELEASE_URL =
   "https://github.com/vivekkushwahaofficial/CodeVault/releases/latest";
@@ -251,7 +310,6 @@ export default function Privacy() {
               "
             >
               Privacy
-
               <span
                 aria-hidden="true"
                 className="
@@ -389,10 +447,7 @@ export default function Privacy() {
               md:hidden
             "
           >
-            <nav
-              className="flex flex-col p-2"
-              aria-label="Mobile navigation"
-            >
+            <nav className="flex flex-col p-2" aria-label="Mobile navigation">
               <a
                 href="/#features"
                 onClick={closeMenu}
@@ -482,9 +537,7 @@ export default function Privacy() {
                 "
               >
                 <Download size={16} />
-
                 Download Extension
-
                 <ArrowUpRight size={15} />
               </a>
             </nav>
@@ -592,7 +645,7 @@ export default function Privacy() {
             >
               <span className="h-px w-8 bg-white/10" />
 
-              <span>Last Updated: August 2026</span>
+              <span>Last Updated: September 2026</span>
             </div>
           </div>
 
@@ -669,7 +722,7 @@ export default function Privacy() {
             ))}
 
             {/* =================================================
-                CONTACT — 09
+                CONTACT — 10
             ================================================== */}
 
             <section className="px-5 py-6 sm:px-7 sm:py-7 lg:px-8">
@@ -687,7 +740,7 @@ export default function Privacy() {
                     text-purple-400/60
                   "
                 >
-                  09
+                  10
                 </span>
 
                 {/* Content */}
@@ -752,11 +805,7 @@ export default function Privacy() {
                         "
                       >
                         code-vault-website.vercel.app
-
-                        <ExternalLink
-                          size={13}
-                          aria-hidden="true"
-                        />
+                        <ExternalLink size={13} aria-hidden="true" />
                       </a>
                     </div>
                   </div>
@@ -818,10 +867,7 @@ export default function Privacy() {
                 focus-visible:ring-purple-400/60
               "
             >
-              <FaGithub
-                size={15}
-                aria-hidden="true"
-              />
+              <FaGithub size={15} aria-hidden="true" />
 
               <span>View GitHub</span>
 
