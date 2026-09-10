@@ -1,16 +1,16 @@
 import { FaGithub } from "react-icons/fa";
-import { Download, ArrowUpRight, Check, GitBranch } from "lucide-react";
+import { ArrowUpRight, Download, Check, GitBranch } from "lucide-react";
 import { motion } from "framer-motion";
 
-const REPOSITORY_URL =
-  "https://github.com/vivekkushwahaofficial/CodeVault";
+const REPOSITORY_URL = "https://github.com/vivekkushwahaofficial/CodeVault";
 
-const RELEASE_URL =
-  "https://github.com/vivekkushwahaofficial/CodeVault/releases/latest";
+const CHROME_WEB_STORE_URL =
+  "https://chromewebstore.google.com/detail/codevault/loigjljekeahnjccojnnkmagibghofbn";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-28 lg:pb-20 lg:pt-22">      {/* =====================================================
+    <section className="relative overflow-hidden px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-28 lg:pb-20 lg:pt-22">
+      {/* =====================================================
           BACKGROUND
       ====================================================== */}
 
@@ -32,6 +32,7 @@ export default function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.8)]" />
 
             <span>v1.4.0 Released</span>
+
             <ArrowUpRight size={13} />
           </motion.div>
 
@@ -67,8 +68,7 @@ export default function Hero() {
               </span>
 
               <span className="mt-1 block text-[2.75rem] leading-[1.02]">
-                your{" "}
-                <span className="text-purple-300">coding</span>
+                your <span className="text-purple-300">coding</span>
               </span>
 
               <span className="mt-1 block text-[2.75rem] leading-[1.02] text-purple-300">
@@ -88,9 +88,9 @@ export default function Hero() {
             transition={{ delay: 0.25, duration: 0.5 }}
             className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-lg sm:leading-8"
           >
-            CodeVault detects accepted submissions from LeetCode,
-            GeeksforGeeks, and HackerRank, then automatically extracts,
-            organizes, analyzes, and pushes your solutions directly to GitHub.
+            CodeVault detects accepted submissions from LeetCode, GeeksforGeeks,
+            and HackerRank, then automatically extracts, organizes, analyzes,
+            and pushes your solutions directly to GitHub.
           </motion.p>
 
           {/* =================================================
@@ -103,11 +103,12 @@ export default function Hero() {
             transition={{ delay: 0.38, duration: 0.5 }}
             className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
           >
-            {/* Download */}
+            {/* Install Extension */}
             <a
-              href={RELEASE_URL}
+              href={CHROME_WEB_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Install CodeVault extension"
               className="group inline-flex items-center justify-center gap-2.5 rounded-xl bg-purple-500 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_8px_30px_rgba(168,85,247,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-purple-400 hover:shadow-[0_12px_35px_rgba(168,85,247,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <Download
@@ -115,9 +116,7 @@ export default function Hero() {
                 strokeWidth={2.2}
                 className="transition-transform duration-300 group-hover:-translate-y-0.5"
               />
-
-              Download Extension
-
+              Install Extension
               <ArrowUpRight
                 size={15}
                 className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -135,15 +134,18 @@ export default function Hero() {
                 size={17}
                 className="transition-transform duration-300 group-hover:scale-110"
               />
-
               View on GitHub
-
               <ArrowUpRight
                 size={15}
                 className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
           </motion.div>
+
+          {/* Browser Support */}
+          <p className="mt-4 text-xs text-zinc-500 sm:text-sm">
+            Works with Chrome, Brave, Edge & other Chromium-based browsers
+          </p>
         </div>
 
         {/* =====================================================
@@ -186,10 +188,7 @@ export default function Hero() {
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 One submission.
                 <br />
-
-                <span className="text-purple-300">
-                  Automatic sync.
-                </span>
+                <span className="text-purple-300">Automatic sync.</span>
               </h2>
 
               <p className="mt-5 max-w-md text-sm leading-7 text-zinc-400 sm:text-base">
@@ -220,9 +219,7 @@ export default function Hero() {
                     key={step.number}
                     className="rounded-xl border border-white/[0.07] bg-white/[0.025] px-3 py-3"
                   >
-                    <span
-                      className={`text-[11px] font-semibold ${step.color}`}
-                    >
+                    <span className={`text-[11px] font-semibold ${step.color}`}>
                       {step.number}
                     </span>
 
@@ -262,10 +259,7 @@ export default function Hero() {
                         </p>
                       </div>
 
-                      <Check
-                        size={15}
-                        className="ml-auto text-emerald-400"
-                      />
+                      <Check size={15} className="ml-auto text-emerald-400" />
                     </div>
                   </div>
 
@@ -313,10 +307,7 @@ export default function Hero() {
                         </p>
                       </div>
 
-                      <Check
-                        size={15}
-                        className="ml-auto text-emerald-400"
-                      />
+                      <Check size={15} className="ml-auto text-emerald-400" />
                     </div>
                   </div>
                 </div>
@@ -340,70 +331,52 @@ export default function Hero() {
                 </div>
 
                 <pre className="max-w-full overflow-x-auto p-4 text-left font-mono text-[11px] leading-[1.6] text-zinc-500 sm:text-[8px]">
-                  <span className="text-zinc-200">
-                    codevault-solutions/
-                  </span>
+                  <span className="text-zinc-200">codevault-solutions/</span>
                   {"\n"}
                   <span>├── </span>
                   <span className="text-orange-400">GFG/</span>
                   {"\n"}
-                  <span>│   └── </span>
+                  <span>│ └── </span>
                   <span className="text-blue-400">Java/</span>
                   {"\n"}
-                  <span>│       └── </span>
+                  <span>│ └── </span>
                   <span className="text-emerald-400">Easy/</span>
                   {"\n"}
-                  <span>│           └── </span>
-                  <span className="text-zinc-300">
-                    Missing-in-Array/
-                  </span>
+                  <span>│ └── </span>
+                  <span className="text-zinc-300">Missing-in-Array/</span>
                   {"\n"}
-                  <span>│               └── </span>
-                  <span className="text-yellow-400">
-                    Solution.java
-                  </span>
+                  <span>│ └── </span>
+                  <span className="text-yellow-400">Solution.java</span>
                   {"\n\n"}
                   <span>├── </span>
-                  <span className="text-purple-400">
-                    HackerRank/
-                  </span>
+                  <span className="text-purple-400">HackerRank/</span>
                   {"\n"}
-                  <span>│   └── </span>
+                  <span>│ └── </span>
                   <span className="text-blue-400">Java/</span>
                   {"\n"}
-                  <span>│       └── </span>
+                  <span>│ └── </span>
                   <span className="text-red-400">Hard/</span>
                   {"\n"}
-                  <span>│           └── </span>
-                  <span className="text-zinc-300">
-                    Array-Manipulation/
-                  </span>
+                  <span>│ └── </span>
+                  <span className="text-zinc-300">Array-Manipulation/</span>
                   {"\n"}
-                  <span>│               └── </span>
-                  <span className="text-yellow-400">
-                    Solution.java
-                  </span>
+                  <span>│ └── </span>
+                  <span className="text-yellow-400">Solution.java</span>
                   {"\n\n"}
                   <span>└── </span>
-                  <span className="text-orange-400">
-                    LeetCode/
-                  </span>
+                  <span className="text-orange-400">LeetCode/</span>
                   {"\n"}
-                  <span>    └── </span>
+                  <span> └── </span>
                   <span className="text-blue-400">C++/</span>
                   {"\n"}
-                  <span>        └── </span>
+                  <span> └── </span>
                   <span className="text-emerald-400">Easy/</span>
                   {"\n"}
-                  <span>            └── </span>
-                  <span className="text-zinc-300">
-                    Two-Sum/
-                  </span>
+                  <span> └── </span>
+                  <span className="text-zinc-300">Two-Sum/</span>
                   {"\n"}
-                  <span>                └── </span>
-                  <span className="text-yellow-400">
-                    Solution.cpp
-                  </span>
+                  <span> └── </span>
+                  <span className="text-yellow-400">Solution.cpp</span>
                 </pre>
               </div>
             </div>

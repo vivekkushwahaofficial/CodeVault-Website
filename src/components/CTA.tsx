@@ -1,11 +1,10 @@
 import { ArrowRight, CheckCircle2, Download } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
-const GITHUB_URL =
-  "https://github.com/vivekkushwahaofficial/CodeVault";
+const GITHUB_URL = "https://github.com/vivekkushwahaofficial/CodeVault";
 
-const RELEASE_URL =
-  "https://github.com/vivekkushwahaofficial/CodeVault/releases/latest";
+const CHROME_WEB_STORE_URL =
+  "https://chromewebstore.google.com/detail/codevault/loigjljekeahnjccojnnkmagibghofbn";
 
 export default function CTA() {
   return (
@@ -63,19 +62,13 @@ export default function CTA() {
 
           {/* Label */}
           <div className="relative inline-flex items-center gap-3">
-            <span
-              aria-hidden="true"
-              className="h-px w-7 bg-purple-400/60"
-            />
+            <span aria-hidden="true" className="h-px w-7 bg-purple-400/60" />
 
             <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
               Get Started
             </span>
 
-            <span
-              aria-hidden="true"
-              className="h-px w-7 bg-purple-400/60"
-            />
+            <span aria-hidden="true" className="h-px w-7 bg-purple-400/60" />
           </div>
 
           {/* Heading */}
@@ -92,9 +85,7 @@ export default function CTA() {
           >
             Ready to organize
             <br />
-            <span className="text-purple-300">
-              your coding journey?
-            </span>
+            <span className="text-purple-300">your coding journey?</span>
           </h2>
 
           {/* Description */}
@@ -107,8 +98,8 @@ export default function CTA() {
               sm:text-base sm:leading-8
             "
           >
-            Let CodeVault automatically detect, organize, and synchronize
-            your accepted coding solutions while you focus on solving problems.
+            Let CodeVault automatically detect, organize, and synchronize your
+            accepted coding solutions while you focus on solving problems.
           </p>
 
           {/* Actions */}
@@ -121,9 +112,9 @@ export default function CTA() {
               sm:flex-row sm:items-center
             "
           >
-            {/* Download */}
+            {/* Extension */}
             <a
-              href={RELEASE_URL}
+              href={CHROME_WEB_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -154,9 +145,7 @@ export default function CTA() {
                   group-hover:-translate-y-0.5
                 "
               />
-
-              Download Extension
-
+              Install Extension
               <ArrowRight
                 size={16}
                 className="
@@ -195,13 +184,11 @@ export default function CTA() {
               <FaGithub
                 size={17}
                 className="
-    transition-transform duration-300
-    group-hover:scale-105
-  "
+                  transition-transform duration-300
+                  group-hover:scale-105
+                "
               />
-
               View on GitHub
-
               <ArrowRight
                 size={16}
                 className="
@@ -211,6 +198,18 @@ export default function CTA() {
               />
             </a>
           </div>
+
+          {/* Browser support */}
+          <p
+            className="
+              relative mt-4
+              text-xs
+              text-zinc-500
+              sm:text-sm
+            "
+          >
+            Works with Chrome, Brave, Edge & other Chromium-based browsers
+          </p>
 
           {/* Trust points */}
           <div

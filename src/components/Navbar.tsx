@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { ArrowUpRight, Download, Menu, X } from "lucide-react";
 
-const GITHUB =
-  "https://github.com/vivekkushwahaofficial/CodeVault";
+const GITHUB = "https://github.com/vivekkushwahaofficial/CodeVault";
 
-const RELEASE_URL =
-  "https://github.com/vivekkushwahaofficial/CodeVault/releases/latest";
+const CHROME_WEB_STORE_URL =
+  "https://chromewebstore.google.com/detail/codevault/loigjljekeahnjccojnnkmagibghofbn";
 
 const navItems = [
   {
@@ -23,7 +22,7 @@ const navItems = [
     href: "#roadmap",
   },
   {
-    label: "Download",
+    label: "Install",
     href: "#download",
   },
 ];
@@ -68,16 +67,10 @@ export default function Navbar() {
       (entries) => {
         const visibleSection = entries
           .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              b.intersectionRatio -
-              a.intersectionRatio,
-          )[0];
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
         if (visibleSection?.target.id) {
-          setActiveSection(
-            `#${visibleSection.target.id}`,
-          );
+          setActiveSection(`#${visibleSection.target.id}`);
         }
       },
       {
@@ -124,11 +117,7 @@ export default function Navbar() {
       block: "start",
     });
 
-    window.history.replaceState(
-      null,
-      "",
-      href,
-    );
+    window.history.replaceState(null, "", href);
 
     closeMenu();
   };
@@ -175,37 +164,26 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           {navItems.map((item) => {
-            const isActive =
-              activeSection === item.href;
+            const isActive = activeSection === item.href;
 
             return (
               <a
                 key={item.href}
                 href={item.href}
-                onClick={(event) =>
-                  handleNavClick(
-                    event,
-                    item.href,
-                  )
-                }
+                onClick={(event) => handleNavClick(event, item.href)}
                 className={[
                   "relative rounded-xl px-4 py-2 text-sm",
                   "transition-colors duration-200",
-                  isActive
-                    ? "text-white"
-                    : "text-zinc-400 hover:text-white",
+                  isActive ? "text-white" : "text-zinc-400 hover:text-white",
                 ].join(" ")}
               >
                 {item.label}
 
-                {/* Active underline */}
                 <span
                   className={[
                     "absolute bottom-0 left-1/2 h-px -translate-x-1/2",
                     "bg-purple-400 transition-all duration-300",
-                    isActive
-                      ? "w-8 opacity-100"
-                      : "w-0 opacity-0",
+                    isActive ? "w-8 opacity-100" : "w-0 opacity-0",
                   ].join(" ")}
                 />
               </a>
@@ -240,11 +218,12 @@ export default function Navbar() {
             />
           </a>
 
-          {/* Desktop Download */}
+          {/* Desktop Install */}
           <a
-            href={RELEASE_URL}
+            href={CHROME_WEB_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Install CodeVault"
             className="group hidden items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:border-purple-400/40 hover:bg-white/[0.08] md:inline-flex"
           >
             <Download
@@ -252,35 +231,23 @@ export default function Navbar() {
               className="transition-transform duration-200 group-hover:-translate-y-0.5"
             />
 
-            <span>Download</span>
+            <span>Install</span>
 
             <ArrowUpRight
               size={15}
-              className="text-zinc-500 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-purple-300"
+              className="text-zinc-500 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-purple-300"
             />
           </a>
 
           {/* Mobile Menu */}
           <button
             type="button"
-            onClick={() =>
-              setIsOpen(
-                (previous) => !previous,
-              )
-            }
-            aria-label={
-              isOpen
-                ? "Close menu"
-                : "Open menu"
-            }
+            onClick={() => setIsOpen((previous) => !previous)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-zinc-300 transition-colors hover:bg-white/[0.07] hover:text-white md:hidden"
           >
-            {isOpen ? (
-              <X size={19} />
-            ) : (
-              <Menu size={19} />
-            )}
+            {isOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
         </div>
       </div>
@@ -291,24 +258,15 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="mx-auto mt-2 max-w-[1440px] overflow-hidden rounded-[22px] border border-white/10 bg-zinc-950/95 shadow-[0_20px_60px_rgba(0,0,0,0.4)] backdrop-blur-2xl md:hidden">
-          <nav
-            className="flex flex-col p-2"
-            aria-label="Mobile navigation"
-          >
+          <nav className="flex flex-col p-2" aria-label="Mobile navigation">
             {navItems.map((item) => {
-              const isActive =
-                activeSection === item.href;
+              const isActive = activeSection === item.href;
 
               return (
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={(event) =>
-                    handleNavClick(
-                      event,
-                      item.href,
-                    )
-                  }
+                  onClick={(event) => handleNavClick(event, item.href)}
                   className={[
                     "rounded-xl px-4 py-3.5 text-sm",
                     "transition-colors duration-200",
@@ -332,19 +290,23 @@ export default function Navbar() {
 
             <div className="my-1 border-t border-white/10" />
 
+            {/* Mobile Install */}
             <a
-              href={RELEASE_URL}
+              href={CHROME_WEB_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
               className="m-1 inline-flex items-center justify-center gap-2 rounded-xl bg-purple-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-purple-400"
             >
               <Download size={16} />
-
-              Download Extension
-
+              Install Extension
               <ArrowUpRight size={15} />
             </a>
+
+            {/* Browser support */}
+            <p className="px-3 pb-2 pt-1 text-center text-[10px] text-zinc-600">
+              Chrome · Brave · Edge · Chromium
+            </p>
           </nav>
         </div>
       )}
