@@ -1,38 +1,41 @@
 # 🚀 CodeVault
 
-> Automatically sync accepted LeetCode & GreeksForGreeks solutions to GitHub.
+> Automatically detect, organize, and synchronize accepted coding solutions from supported coding platforms to GitHub.
 
-CodeVault is an open-source browser extension that detects accepted coding submissions, extracts the solution and metadata, and automatically commits everything to your GitHub repository.
+CodeVault is an open-source browser extension that detects accepted coding submissions, extracts solution code and metadata, and automatically syncs them to a GitHub repository.
 
 ## ✨ Features
 
-- ⚡ Automatic LeetCode & GreeksForGreeks submission detection
+- ⚡ Automatic accepted-solution detection
+- 🌐 Supports LeetCode, GeeksforGeeks, and HackerRank
 - 📄 Extract source code and problem metadata
-- 📂 Organize solutions in GitHub
+- 📂 Organize solutions in GitHub by platform, language, and difficulty
 - 🔐 Secure GitHub OAuth authentication
-- 🚀 One-click download via GitHub Releases
+- 🔄 Automatic GitHub synchronization
+- 📊 Coding statistics and activity heatmap
 - 🌙 Modern and responsive landing page
 
 ## 🌐 Website
 
 https://code-vault-website.vercel.app/
 
-## 📥 Download
+## 📥 Install CodeVault
 
-https://github.com/vivekkushwahaofficial/CodeVault/releases/latest
+[![Install from Chrome Web Store](https://img.shields.io/badge/Install-Chrome%20Web%20Store-blue?logo=googlechrome)](https://chromewebstore.google.com/detail/codevault/loigjljekeahnjccojnnkmagibghofbn)
+
+CodeVault works with Chrome, Brave, Edge, and other Chromium-based browsers.
 
 ## 💻 Repository
 
-https://github.com/vivekkushwahaofficial/CodeVault
+https://github.com/vivekkushwaofficial/CodeVault
 
 ## 🛣️ Roadmap
 
-- Multi-platform support
+- More coding platform support
 - AI-powered problem classification
 - Analytics dashboard
 - Portfolio generator
 - Revision planner
-- Chrome Web Store release
 
 ## 🤝 Contributing
 
