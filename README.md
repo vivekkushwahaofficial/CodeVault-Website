@@ -2,6 +2,12 @@
 
 > Automatically detect, organize, and synchronize accepted coding solutions from supported coding platforms to GitHub.
 
+![Version](https://img.shields.io/badge/version-v1.4.0-blue)
+![Status](https://img.shields.io/badge/status-Active-success)
+![License](https://img.shields.io/badge/license-Apache--2.0-green)
+![Platforms](https://img.shields.io/badge/platforms-3-orange)
+
+
 CodeVault is an open-source browser extension that detects accepted coding submissions, extracts solution code and metadata, and automatically syncs them to a GitHub repository.
 
 ## ✨ Features
