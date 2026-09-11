@@ -17,7 +17,12 @@ CodeVault is an open-source browser extension that detects accepted coding submi
 
 ## 🌐 Website
 
-https://code-vault-website.vercel.app/
+[https://code-vault-website.vercel.app/](https://code-vault-website.vercel.app/)
+
+## 🔗 Connect
+
+- [LinkedIn](https://www.linkedin.com/company/codevault-tool/)
+- [GitHub](https://github.com/vivekkushwaofficial/CodeVault)
 
 ## 📥 Install CodeVault
 
