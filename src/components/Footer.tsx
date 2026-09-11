@@ -1,14 +1,13 @@
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const GITHUB =
-  "https://github.com/vivekkushwahaofficial/CodeVault";
+const GITHUB = "https://github.com/vivekkushwahaofficial/CodeVault";
 
-const GITLAB =
-  "https://gitlab.com/vivekkushwahaofficial/codevault";
+const GITLAB = "https://gitlab.com/vivekkushwahaofficial/codevault";
 
-const OWNER_PROFILE =
-  "https://vivekkushwahaofficial.tech/";
+const LINKEDIN = "https://www.linkedin.com/company/codevault-tool/";
+
+const OWNER_PROFILE = "https://vivekkushwahaofficial.tech/";
 
 export default function Footer() {
   return (
@@ -48,33 +47,64 @@ export default function Footer() {
               LeetCode, GeeksforGeeks, and HackerRank directly to GitHub.
             </p>
 
-            {/* GitHub */}
-            <a
-              href={GITHUB}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open CodeVault GitHub repository"
-              className="
-                mt-6 inline-flex h-10 w-10
-                items-center justify-center
-                rounded-xl
-                border border-white/10
-                bg-zinc-900/80
-                text-white
-                transition-all duration-300
-                hover:-translate-y-0.5
-                hover:border-purple-400/40
-                hover:bg-purple-500/10
-                hover:text-purple-300
-                focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-purple-400
-                focus-visible:ring-offset-2
-                focus-visible:ring-offset-[#151515]
-              "
-            >
-              <FaGithub size={18} />
-            </a>
+            {/* Social Links */}
+            <div className="mt-6 flex items-center gap-3">
+              {/* GitHub */}
+              <a
+                href={GITHUB}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open CodeVault GitHub repository"
+                className="
+                  inline-flex h-10 w-10
+                  items-center justify-center
+                  rounded-xl
+                  border border-white/10
+                  bg-zinc-900/80
+                  text-white
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:border-purple-400/40
+                  hover:bg-purple-500/10
+                  hover:text-purple-300
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-purple-400
+                  focus-visible:ring-offset-2
+                  focus-visible:ring-offset-[#151515]
+                "
+              >
+                <FaGithub size={18} />
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open CodeVault LinkedIn page"
+                className="
+                  inline-flex h-10 w-10
+                  items-center justify-center
+                  rounded-xl
+                  border border-white/10
+                  bg-zinc-900/80
+                  text-white
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:border-purple-400/40
+                  hover:bg-purple-500/10
+                  hover:text-purple-300
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-purple-400
+                  focus-visible:ring-offset-2
+                  focus-visible:ring-offset-[#151515]
+                "
+              >
+                <FaLinkedin size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Product */}
@@ -253,8 +283,8 @@ export default function Footer() {
 
               {/* Description */}
               <p className="max-w-2xl text-sm leading-6 text-zinc-400">
-                Building CodeVault to help developers organize and sync
-                coding solutions automatically.
+                Building CodeVault to help developers organize and sync coding
+                solutions automatically.
               </p>
 
               {/* Profile Link */}
@@ -308,9 +338,7 @@ export default function Footer() {
               md:text-left
             "
           >
-            <p>
-              © {new Date().getFullYear()} CodeVault. All rights reserved.
-            </p>
+            <p>© {new Date().getFullYear()} CodeVault. All rights reserved.</p>
 
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:justify-end">
               <Link
