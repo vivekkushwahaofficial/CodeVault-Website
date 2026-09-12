@@ -306,7 +306,7 @@ export default function Footer() {
                   focus-visible:ring-offset-[#151515]
                 "
               >
-                <span>View Owner Profile</span>
+                <span>View Profile</span>
 
                 <span
                   aria-hidden="true"
