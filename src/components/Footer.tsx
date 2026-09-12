@@ -242,9 +242,9 @@ export default function Footer() {
             />
 
             {/* Label */}
-            <p className="relative text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
+            {/* <p className="relative text-[10px] font-semibold uppercase tracking-[0.3em] text-purple-400 sm:text-xs">
               Owner
-            </p>
+            </p> */}
 
             {/* Owner Content */}
             <div
